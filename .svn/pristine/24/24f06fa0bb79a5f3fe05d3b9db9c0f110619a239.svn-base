@@ -1,0 +1,23 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/team.css')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content')
+            div(class='title',style='margin-top:30px')
+                h1
+                    em(class='jzgc-icon')
+                    b 家族构成
+                    i FAMILY STRUCTURE
+            div(class='team-module',style='margin-top:10px')
+                img(src='/imgs/team/jzgc_03.jpg',alt='久拓团队合照')
+            div(class='team-module')
+                img(src='/imgs/team/jzgc_06.jpg',alt='久拓组织体系与职能')
+                img(src='/imgs/team/jzgc_07.jpg',alt='久拓组织体系介绍')
+            div(class='team-module',style='margin-bottom:30px')
+                img(src='/imgs/team/jzgc_09.jpg',alt='久拓职级体系与工作岗位')
+                img(src='/imgs/team/jzgc_10.jpg',alt='久拓职级体系与工作岗位')
+    include commons/footer

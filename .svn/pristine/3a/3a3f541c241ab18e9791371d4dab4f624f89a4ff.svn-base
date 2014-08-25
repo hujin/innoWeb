@@ -1,0 +1,191 @@
+
+
+.container{
+    padding:40px 5px 0;
+    width:980px;
+}
+
+.container .list{
+    width:225px;
+    display:inline;
+    float:left;
+    margin:0 10px;
+}
+
+
+.list .list-item{
+    background:#fff;
+    border-radius:3px;
+    margin-bottom:20px;
+}
+
+.list-item img{
+    width:225px;
+    border-radius:3px 3px 0 0;
+    cursor: pointer;
+}
+
+.list-item img:hover{
+    filter:alpha(opacity=80); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.8; /*Firefox私有，透明度50%*/
+    opacity:0.8;/*其他，透明度50%*/
+}
+
+.list-item .list-item-info{
+    padding:10px;
+}
+
+.list-item-info-title h2{
+    font-size:16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-item-info-summary{
+    margin:5px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-item-info-other{
+    font-size:12px;
+    color:#b6b6b6;
+}
+
+.list-item-info-vote{
+    float:right;
+}
+
+
+/*******mask start*******/
+.mask{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:999;
+    background:url('../imgs/team/bj.png') repeat;
+
+}
+
+.mask .mask-close{
+    position:absolute;
+    right:10px;
+    top:10px;
+    font-size:20px;
+    color:#fff;
+}
+
+.mask .mask-content{
+    width:990px;
+    margin:0 auto;
+    margin-top:38px;
+    min-height:200px;
+}
+
+.mask-title{
+    float:left;
+    margin-top:28px;
+    margin-left:50px;
+}
+
+.mask-title h2{
+    font-size:28px;
+    line-height:28px;
+    color:#fff;
+}
+
+.mask-date{
+    float:left;
+    margin-right:15px;
+    margin-top: 3px;
+}
+
+.mask .mask-share{
+    float:right;
+    color:#fff;
+    margin-top: 35px;
+    margin-right: 40px;
+}
+
+.mask-share label{float:left; margin-right:15px;margin-top: 3px;}
+.mask-share a{display:inline-block; width:24px; height:24px; background-image:url(../imgs/news/qzone.png); margin-right:5px}
+.mask-share a.wb-icon{background-position:0 0;}
+.mask-share a.qzone-icon{background-position:-24px 0;}
+.mask-share a.qq-icon{background-position:-48px 0;}
+.mask-share a.sina-icon{background-position:-72px 0;}
+
+
+.mask-body{
+    clear:both;
+    padding-top:50px;
+    position:relative;
+    min-height:420px;
+}
+
+.mask-prev,.mask-next{
+    width:30px;
+
+    height:100%;
+    position: absolute;
+    top: 350px;
+}
+
+.mask-prev{
+    margin-right:10px;
+    left:0px;
+}
+
+.mask-next{
+    margin-left:10px;
+    right:0;
+}
+
+.mask-prev-icon,.mask-next-icon{
+    width:28px;
+    height:60px;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+
+}
+
+.mask-prev-icon{
+    background:url('../imgs/team/left.png') no-repeat;
+}
+
+.mask-next-icon{
+    background:url('../imgs/team/right.png') no-repeat;
+}
+
+.mask-img-content{
+    min-height:420px;
+    width:910px;
+    position:absolute;
+    left:40px;
+    text-align: center;
+}
+
+.mask-img-content img{
+    height:420px
+}
+
+.mask-summary{
+    width:890px;
+    padding:0 10px;
+    margin:0 auto;
+    color:#fff;
+}
+
+.mask-footer{
+    clear:both;
+    margin-top:40px;
+}
+
+.hide{
+    display:none;
+}
+/*******mask end*******/

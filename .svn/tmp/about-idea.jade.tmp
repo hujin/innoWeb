@@ -1,0 +1,36 @@
+h2(id='2')
+    em(class='icon-idea')
+    ='公司理念'
+div(class='idea clear')
+    h3
+        img(src='imgs/about/logo2.png')
+    ul(class='cont-list')
+        li(class='top')
+            img(src='imgs/about/about-a.png')
+        li(class='text')
+            em Core values
+            h4 我们的核心价值观
+            p 专业、专注、创新、创造、沟通、分享、共成长
+        li(class='text')
+            em Talent values
+            h4 我们的人才价值观
+            p 关注、尊重、发展、提升
+        li(class='text')
+            em Working criterion
+            h4 我们的工作准则
+            p 严谨、认真、务实、高效
+    ul(class='cont-list',style='margin:0')
+        li(class='top')
+            img(src='imgs/about/about-b.png')
+        li(class='text')
+            em our Vision
+            h4 我们的愿景
+            p 成为受客户和员工认可的公司，成为优秀的IT服务供应商，成为客户首选的合作伙伴；为客户创造价值，为人才实现价值
+        li(class='text')
+            em Mission
+            h4 我们的使命
+            p 服务客户，不断创新，以信息化推动社会发展和进步。
+        li(class='text')
+            em GOAL
+            h4 我们的目标
+            p 开心工作、快乐生活

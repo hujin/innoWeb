@@ -1,0 +1,5 @@
+$(function(){
+   $(".img-list li").click(function(e){
+       $(".img-cont img").attr("src",$(e.target).attr("src"));
+   })
+});

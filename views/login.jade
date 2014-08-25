@@ -1,0 +1,32 @@
+extends layout
+block head
+    link(rel='stylesheet',href='/css/login.css')
+block content
+    form(method="post")
+        div(class='login-main')
+            div(class='login-floater')
+            div(class='login-banner')
+            div(class='login-container')
+                - if (message != "")
+                    div(class='error-message')=message
+                dl
+                    dt(class='idLine')
+                        b(class='ui-input-user')
+                        input(type='text',id='idInput',name='idInput',class='ui-input')
+                        label(for='idInput',class='placeholder') 请输入用户名
+                        div(class='ui-tip')
+                            div(class='ui-tip-shadow')
+                            div(class='ui-tip-arrow')
+                            span(class='ui-tip-message') 用户名无效！
+                    dt(class='passwordLine')
+                        b(class='ui-input-password')
+                        input(type='password',id='passwordInput',name='passwordInput',class='ui-input')
+                        label(for='passwordInput',class='placeholder') 请输入密码
+                        div(class='ui-tip')
+                            div(class='ui-tip-shadow')
+                            div(class='ui-tip-arrow')
+                            span(class='ui-tip-message') 密码错误！
+                    dt
+                        input(type='submit',class='ui-button',value='登 陆')
+block bottom
+    script(type='text/javascript',src='/js/login.js')

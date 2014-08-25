@@ -1,0 +1,61 @@
+$(function(){
+    loadFlvs("","http://192.168.1.62:2312/www/cf.flv","resViewer");
+    var url ='newshtml/newsAddVotes?ID=' + $(".news-votes").attr("data-id") + '&votes=' + $(".news-votes").attr("data-votes");
+    $.ajax({
+        url:url,
+        type:'get'
+    });
+
+    loadFlvs1("","http://192.168.1.62:2312/www/fbh.flv","resViewer2");
+
+    var title=encodeURIComponent($(".news-title").text().substring(0,76)),
+        url = encodeURIComponent(location.href),
+        server_url=null;
+
+    $(".news-share a").click(function(){
+        if($(this).is(".sina-icon")){
+            server_url="http://v.t.sina.com.cn/share/share.php?title="+ title +"&url=" + url;
+        }
+
+        if($(this).is(".qzone-icon")){
+            server_url="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary="+ title +"&url="+url;
+        }
+
+        if($(this).is(".wb-icon")){
+            server_url="http://v.t.qq.com/share/share.php?title="+title+"&url="+url;
+        }
+
+        if($(this).is(".qq-icon")){
+            server_url="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary="+ title +"&url="+url;
+        }
+
+        window.open(item.server_url,"newWin","scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes");
+        return false;
+    })
+});
+
+function loadFlvs(hostPath,flvUrl,id) {
+    var obj="<a href='"+flvUrl+"' width='500px' height='400px' id='player'>";
+    $("#"+id).html(obj);
+    flowplayer("player", "/js/flowplayer-3.2.5.swf", {
+        onLoad : function() { // called when player has finished loading
+            this.setVolume(30); // set volume property
+            this.setHeight(420);
+        }
+    });
+}
+
+function loadFlvs1(hostPath,flvUrl,id) {
+    var obj="<a href='"+flvUrl+"' width='500px' height='400px' id='player1'>";
+    $("#"+id).html(obj);
+    flowplayer("player1", "/js/flowplayer-3.2.5.swf", {
+        onLoad : function() { // called when player has finished loading
+            this.setVolume(30); // set volume property
+            this.setHeight(420);
+        },
+        clip: {
+            autoPlay: false,
+            autoBuffering: true
+        }
+    });
+}

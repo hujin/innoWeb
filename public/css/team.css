@@ -1,0 +1,27 @@
+.team-module{margin-top:20px}
+.team-title{height:80px; font-size:22px; line-height:80px; padding:0 55px}
+.team-tree{position:absolute; top:100px; left:20px}
+.team-system{width:990px; height:853px; background: url("../imgs/team/jzgc_06.png") no-repeat; position:relative}
+.team-system .system-cont{position:absolute; top:425px; left:20px; width:950px; border-top:1px #e7e8eb solid;}
+.system-cont ul{padding-top:15px}
+.system-cont .list{ background:url('../imgs/team/maglist-icon.png') no-repeat 40px 6px; padding-left:70px; margin:10px 0; *margin-bottom:0px;font-size:14px; float:left;  display:inline;width:350px}
+.system-cont .list.w450{width:450px}
+.system-cont .list.w800{width:800px}
+.system-cont .list dl{ background: url('../imgs/team/dl-icon.png') no-repeat -5px 6px; padding-top:10px}
+.system-cont .list dt{padding-top:10px}
+
+.team-work{width:990px; height:903px; background: url('../imgs/team/jzgc_07.png') no-repeat;margin:30px 0}
+.team-work .work-cont{padding:20px 70px}
+.team-work .work-title{font-size:14px; padding:10px 0}
+.team-work .work-post{padding:0 20px 15px 20px; background:#f5f7fa; border-top:2px #f78719 solid; margin-right:20px; float:left; color:#FFF; font-size:14px; height:280px; margin-top:10px}
+.team-work .work-post b{display:block; line-height:30px; text-align:center; color:#f78719; margin-bottom:10px}
+.team-work .work-post li{text-align:center; border-radius:3px; width:120px;}
+.team-work .work-post .list-a{ height:65px; line-height:65px; margin-bottom:15px; }
+.team-work .work-post .list-b{ height:50px; line-height:50px; margin-bottom:10px; }
+.team-work .work-post .list-c{ height:34px; line-height:34px; margin-bottom:15px; }
+.team-work .work-post .list-d{ height:30px; line-height:30px; margin-bottom:10px; }
+
+.team-table{font-size:14px; margin:20px 0;border:none; border-bottom:1px solid #f78719;width:850px;}
+.team-table th{ color:#f78719;line-height:30px;border-bottom:2px solid #f78719; text-align:center; font-weight:bold}
+.team-table td{text-align:center; line-height:30px}
+.team-table .rline{ border-right:1px #dfe1e6 solid}

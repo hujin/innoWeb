@@ -1,0 +1,82 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/commons.css')
+    link(rel='stylesheet',href='/css/news.css')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content clear',style='padding-top:30p')
+            //左边内容
+            div(class='left')
+                div(class='news-mag')
+                    h1(class='title') 杭州久拓软件有限公司新闻动态
+                        p
+                            span
+                                label 分享到:
+                                a(class='wb-icon')
+                                a(class='qzone-icon')
+                                a(class='qq-icon')
+                                a(class='sina-icon')
+                             ='2013-12-45丨xxxxxx丨xxxxxx'
+                    div(class='news-cont')
+                        h2
+                            b 嫦娥三号任务：月面测试，首战告捷
+                        p 2013年12月14日至26日，嫦娥三号探测器搭载的八台有效载荷在第一月昼期间陆续开机完成了探测或月面测试工作，并分别随着陆器和巡视器进入了月夜休眠状态。在月面测试阶段，除降落相机已完成预定任务外，肩负着开展科学探测使命的七台有效载荷性能稳定，获得了大量的探测数据。探月工程地面应用系统和中国科学院为嫦娥三号任务组建的科学应用核心团队及有效载荷研制单位，对获取的测试数据进行了初步分析，表明各有效载荷工况良好，探测数据的获取、接收、传输、预处理正常，为嫦娥三号任务在第二月昼期间全面开展科学探测打下了坚实基础。
+                        h2
+                            b 嫦娥三号任务：月面测试，首战告捷
+                        p 2013年12月14日至26日，嫦娥三号探测器搭载的八台有效载荷在第一月昼期间陆续开机完成了探测或月面测试工作，并分别随着陆器和巡视器进入了月夜休眠状态。在月面测试阶段，除降落相机已完成预定任务外，肩负着开展科学探测使命的七台有效载荷性能稳定，获得了大量的探测数据。探月工程地面应用系统和中国科学院为嫦娥三号任务组建的科学应用核心团队及有效载荷研制单位，对获取的测试数据进行了初步分析，表明各有效载荷工况良好，探测数据的获取、接收、传输、预处理正常，为嫦娥三号任务在第二月昼期间全面开展科学探测打下了坚实基础。
+                    div(class='mould')
+                        h3 热门推荐
+                        div(class='list')
+                            ul(class='rmtj')
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+                            ul
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+                                li(class='rmtj-list') ·
+                                    a  最新资讯按照时间排序照排序...
+            //右边内容
+            div(class='right')
+                div(class='mould')
+                    h3 最新资讯
+                    ul(class='list')
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                div(class='mould')
+                    h3 热门推荐
+                    ul(class='list')
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                        li(class='news-p') ·
+                            a  杭州久拓软件有限公司最新资讯
+                div(class='mould')
+                    img(src='../imgs/news/news-jpg.jpg')
+            //iframe(src='/html/' + kind + '.html' style='border:0;width:100%;min-height:500px;')
+    include commons/footer

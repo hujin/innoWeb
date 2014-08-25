@@ -1,0 +1,18 @@
+-var products = [{moduleID:2,moduleName:"能源环保",moduleProduct:[{productID:1,productName:"碳排放管理平台",productFuns:[{funID:1,funName:"平台登录页",funDesc:"平台下有碳数据-清单编制，碳决策-预测分析，碳考核-考核评价三大系统，碳数据-清单编制下挂接了浙江省和下属十一个地市的子系统。登录页面包括走势分析图，二氧化碳排放量地区分布图。",imgUrl:"/imgs/product/en/wsqt/image001.png",order:1},{funID:2,funName:"模板管理",funDesc:"根据《温室气体省级编制指南》清单编制的过程预置了清单编制过程的所有报表，并可以根据地市的自身的需要自定义报表，自行设计报表。",imgUrl:"/imgs/product/en/wsqt/image004.png",order:2},{funID:3,funName:"清单编制",funDesc:"平台下有碳数据-清单编制，碳决策-预测分析，碳考核-考核评价三大系统，碳数据-清单编制下挂接了浙江省和下属十一个地市的子系统。登录页面包括走势分析图，二氧化碳排放量地区分布图。",imgUrl:"/imgs/product/en/wsqt/image006.png",order:3},{funID:4,funName:"公式编辑",funDesc:"根据《温室气体省级编制指南》清单编制的过程预置了清单编制过程的所有公式，并可以根据地市的自身的需要自定义报表的公式。",imgUrl:"/imgs/product/en/wsqt/image009.png",order:4},{funID:5,funName:"统计分析",funDesc:"从领导分析层面，业务需要角度，设置了七大主题的分析页面。其中包括排放总量、按领域分类、按温室气体分类、万元GDP温室气体、人均温室气体、吨标煤温室气体、林业吸收CO2。",imgUrl:"/imgs/product/en/wsqt/image010.png",order:4},{funID:6,funName:"决策分析",funDesc:"从决策分析的业务需要设计决策版，内置多种分析模型。左方设定为分析版，选择分析角度，包括总量、产业、能源等；下方设定为决策版，调整不同的决策参数，包括GDP增速、产业结构、能源消耗等，预测未来的碳排放量走势，预测碳排放峰值，并且已WORD形式生成分析预测报告。",imgUrl:"/imgs/product/en/wsqt/image013.png",order:4}]}]}];
+-var funs = products[0].moduleProduct[0].productFuns;
+-for (var x=0;x<funs.length;x++)
+ -if (x%2==0)
+  div(class='pro-list')
+    div(class='list-cont')
+        h1=funs[x].funName
+        p=funs[x].funDesc
+    div(class='list-cont')
+        img(src=funs[x].imgUrl width='512px' height='384px')
+ -else if (x%2==1)
+  div(class='pro-list-b')
+    div(class='list-cont')
+        img(src=funs[x].imgUrl width='512px' height='384px')
+    div(class='list-cont')
+        h1=funs[x].funName
+        p=funs[x].funDesc
+

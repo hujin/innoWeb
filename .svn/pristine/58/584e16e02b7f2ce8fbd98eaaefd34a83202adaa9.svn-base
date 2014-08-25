@@ -1,0 +1,40 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/base.css')
+    link(rel='stylesheet',href='/css/main.css')
+    link(rel='stylesheet',href='/css/portal.css')
+    script(type='text/javascript',src='/js/jquery-debug.js')
+    script(type='text/javascript',src='/js/commons.js')
+    script(type='text/javascript',src='/js/portal.js')
+block content
+    include commons/nav
+    div(class='main')
+        div(class='banner')
+            div(class='banner-cont')
+                div(class='pic-slide-prev')
+                    a
+                div(class='pic-slide-next')
+                    a
+                ul(class='pic-slide-content')
+                    li(class='pic-slide-panel')
+                        a(href='#')
+                            img(src='/imgs/slide-img.png')
+                    li(class='pic-slide-panel')
+                        a(href='#')
+                            img(src='')
+                            11111
+                    li(class='pic-slide-panel')
+                        a(href='#')
+                            img(src='')
+                            33333
+                ul(class='pic-slide-nav')
+                    li(class='pic-slide-trigger pic-slide-active') ●
+                    li(class='pic-slide-trigger') ●
+                    li(class='pic-slide-trigger') ●
+
+        div(class='content')
+            include portal/portal-news
+            include portal/portal-exp
+            include portal/portal-team
+    include commons/footer

@@ -1,0 +1,41 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/contact.css')
+    script(src='http://api.map.baidu.com/api?v=1.4',type='text/javascript')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content',style='padding-top:40px; position:relative;')
+            h1
+                em(class='lxwm-icon')
+                b 联系我们
+                i CONTACT US
+            div(class='container')
+                div(class='map',id='container')
+                div(class='company-mag')
+                    dl(class='company-mag-list')
+                        dt
+                            b 公司名称
+                            ='  Company:'
+                        dd 杭州久拓软件有限公司
+                        dd(style='font-size:12px') Hangzhou Innovation Software CO.,LTD
+                    dl(class='company-mag-list')
+                        dt
+                            b 公司地址
+                            ='  Address:'
+                        dd 杭州市滨江区秋溢路288号东冠高新科技园1号楼105室
+                        dd(style='font-size:12px') Room 105,  Building No.1, No.288, Qiuyi Road, Binjiang District, Hangzhou City
+                    dl(class='company-mag-list')
+                        dt
+                            b 公司邮箱
+                            ='  E-mail:'
+                        dd admin@9tuo.com
+                    dl(class='company-mag-list')
+                        dt
+                            b 联系电话
+                            ='  TEL & FAX:'
+                        dd TEL: 0571-87677660       FAX:0571-87677662
+    script(src='/js/contact.js',type='text/javascript')
+    include commons/footer

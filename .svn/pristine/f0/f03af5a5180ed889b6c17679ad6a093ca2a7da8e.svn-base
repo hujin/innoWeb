@@ -1,0 +1,8 @@
+div(class='header')
+    img(class='logo',src='/imgs/logo.png')
+    ul(class='main-nav')
+        - if(docs.length)
+            each Menu in docs
+                li
+                    a=Menu.name
+include nav-sub

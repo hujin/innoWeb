@@ -1,0 +1,17 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/base.css')
+    link(rel='stylesheet',href='/css/main.css')
+    link(rel='stylesheet',href='/css/news.css')
+    script(type='text/javascript',src='/js/jquery-debug.js')
+    script(type='text/javascript',src='/js/commons.js')
+block content
+    include commons/nav
+    div(class='main')
+        div(class='content')
+            div(class='news-cont')
+                include news/news-list
+                include news/news-paging
+    include news/news-banner-nav
+    include commons/footer

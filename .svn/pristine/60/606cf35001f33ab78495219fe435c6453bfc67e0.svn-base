@@ -1,0 +1,14 @@
+-for (var x=0;x<3;x++)
+ div(class='pro-list')
+    div(class='list-cont')
+        h1 产品功能特征
+        p 群视频新增屏幕分享功能，支持共有区域分享和窗口分享两种模式。既可划定电脑桌面的部分区域进行分享，也可选中具体窗口进行分享。无论朋友聚会分享、还是工作会议演示，一切都变得如此轻松。
+    div(class='list-cont')
+        img(src='/imgs/pro-pic.png')
+ div(class='pro-list-b')
+    div(class='list-cont')
+        img(src='/imgs/pro-pic.png')
+    div(class='list-cont')
+         h1 产品功能特征
+         p 群视频新增屏幕分享功能，支持共有区域分享和窗口分享两种模式。既可划定电脑桌面的部分区域进行分享，也可选中具体窗口进行分享。无论朋友聚会分享、还是工作会议演示，一切都变得如此轻松。
+

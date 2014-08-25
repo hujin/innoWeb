@@ -1,0 +1,21 @@
+div(class='left')
+    div(class='news-mag')
+        each val,index in news
+            - var date = new Date(val.date).toISOString().substr(0,10)+" "+new Date(val.date).toLocaleTimeString();
+            div(class='news-hd')
+                h1(class='news-title')=val.title
+                div(class='news-title-bar')
+                    div(class='news-date')
+                        span=date
+                    div(class='news-share')
+                        span
+                            label 分享到:
+                            a(class='wb-icon')
+                            a(class='qzone-icon')
+                            a(class='qq-icon')
+                            a(class='sina-icon')
+            div(class='news-cont')
+                h2
+                    b=val.summary
+                p!= val.content
+        include bottomContent

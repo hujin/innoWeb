@@ -1,0 +1,17 @@
+-var funs = product.productFuns;
+-for (var x=0;x<funs.length;x++)
+ -if (x%2==0)
+  div(class='pro-list')
+    div(class='list-cont')
+        h1=funs[x].funName
+        p=funs[x].funDesc
+    div(class='list-cont')
+        img(src=funs[x].imgUrl width='512px' height='384px')
+ -else if (x%2==1)
+  div(class='pro-list-b')
+    div(class='list-cont')
+        img(src=funs[x].imgUrl width='512px' height='384px')
+    div(class='list-cont')
+        h1=funs[x].funName
+        p=funs[x].funDesc
+

@@ -1,0 +1,167 @@
+html{
+    height: 100%;
+    min-height: 660px;
+    background:url('../imgs/login/bg.jpg') no-repeat;
+    background-position: center top;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+}
+
+.login-main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.login-floater{
+    float: left;
+    height: 365px;
+    margin-bottom: -140px;
+    width: 100%;
+}
+
+.login-banner{
+    clear: both;
+    height: 160px;
+    position: relative;
+}
+
+.login-container{
+    width: 260px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: -25px;
+    color: #8a8a8a;
+    font: 14px;
+}
+
+.login-container dt{
+    padding: 1px 10px;
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666666;
+    position: relative;
+}
+
+
+.ui-input{
+    border: 1px #e3e5e8 solid;
+    border-radius: 3px;
+    padding: 0 5px;
+    line-height: normal;
+    line-height: 35px \9;
+    outline: none;
+    vertical-align: middle;
+    width: 208px;
+    height: 33px;
+    padding-left: 35px;
+}
+
+.ui-button * {
+    margin:0;
+    padding:0;
+}
+
+.ui-button{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    *overflow: visible;
+    border: none;
+    width: 250px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    background: #2c55a1;
+    margin-top: 10px;
+    outline: 0;
+}
+
+.ui-button:active {
+    position: relative;
+    top: 1px;
+}
+
+.ui-input-user,.ui-input-password{
+    position: absolute;
+    width: 30px;
+    height: 32px;
+    top: 7px;
+    *top:6px;
+    left: 11px;
+    border-radius: 5px;
+}
+
+.ui-input-user{
+    background: url("../imgs/login/user.png") no-repeat;
+}
+
+.ui-input-password{
+    background: url("../imgs/login/password.png") no-repeat;
+}
+
+.placeholder{
+    position: absolute;
+    color: #c7c7c7;
+    top: 3px;
+    left: 45px;
+}
+
+.ui-tip{
+    position: absolute;
+    width: 140px;
+    height: 28px;
+    line-height: 28px;
+    left: 270px;
+    top: 8px;
+    background: #fff;
+    border-radius: 3px;
+    opacity: 0;
+    /*display: none;*/
+}
+
+.ui-tip .ui-tip-message{
+    color: #288d14;
+    padding-left: 10px;
+    font-weight: bolder;
+}
+
+.ui-tip-shadow,.ui-tip-arrow{
+    position:absolute;
+    border:5px solid;
+    border-color: transparent #fff transparent transparent  ;
+    left:-5px;
+    width:0;
+    height:0;
+    top:30%;
+    margin-left:-4px;
+}
+.ui-tip-arrow{
+    border-right-color:#fff;
+}
+.ui-tip-shadow{
+    border-width:5px !important;
+    right:-14px;
+    margin-left:-5px;
+}
+
+.error-message{
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-size: 14px;
+    color: #ff210d;
+}

@@ -1,0 +1,9 @@
+$(function(){
+
+    var url ='newshtml/newsAddVotes?ID=' + $(".news-votes").attr("data-id") + '&votes=' + $(".news-votes").attr("data-votes");
+
+    $.ajax({
+        url:url,
+        type:'get'
+    });
+});

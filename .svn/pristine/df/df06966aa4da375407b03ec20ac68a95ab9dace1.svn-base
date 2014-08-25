@@ -1,0 +1,36 @@
+.header{
+    width:100%;
+    height:90px;
+    background-color:#ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fafafa));
+    background: -moz-linear-gradient(top, #ffffff, #fafafa);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fafafa');
+    background: -o-linear-gradient(top, #ffffff, #fafafa);
+    background: linear-gradient(top, #ffffff, #fafafa);
+    border-bottom:1px solid #ffffff;
+}
+.nav{width:980px; height:90px; margin:0 auto; }
+.nav .logo{float:left; width:220px;}
+.nav .main-nav{ float:right; width:630px; padding-top:40px}
+.nav .main-nav li{float:left; font-size:16px; padding:0 25px; line-height:22px; border-right:1px #eee solid}
+.nav .main-nav li .hover{color:#ff8523}
+
+.sub-nav{height:170px; background:#26282c;  width:100%; display: none;position:absolute;top:90px;z-index:99999}
+.nav-cont{width:980px; margin:0 auto;height:170px}
+.nav-cont span{float:left}
+.nav-cont .navlist{margin-left:12px; float:left}
+.nav-cont .navlist .fn{float:left; padding:0 31px; height:170px}
+.nav-cont .navlist .hover{background:#000;}
+
+.nav-cont .navlist .fn ul{padding-top:15px}
+.nav-cont .navlist .fn li{line-height:23px}
+.nav-cont .navlist .fn li a{color:#949fb4}
+.nav-cont .navlist .fn li a:hover{ color:#fff}
+.nav-cont .navlist .fn li a:hover font{color:#ff8523}
+
+.main{width:100%;border-top:2px solid #dcdddf}
+.content{margin:0 auto;width:980px}
+
+.footer{ background:url(../imgs/footer-bj.gif); height:100%}
+.footer-cont{margin:0 auto; width:980px; padding:40px 0}
+.footer-cont p{text-align:center; line-height:25px; color:#FFF}

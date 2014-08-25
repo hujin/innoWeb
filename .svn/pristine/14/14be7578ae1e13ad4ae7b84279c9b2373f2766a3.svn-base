@@ -1,0 +1,68 @@
+$(function(){
+    var showTimer,hideTimer;
+    $(".main-nav li").mouseenter(function(){
+        clearTimeout(hideTimer);
+        hideTimer=null;
+        $(".main-nav li").find("a").removeClass("hover");
+
+        $(this).find("a").addClass("hover");
+        $(".navlist").find(".fn").removeClass("hover");
+        $($(".navlist").find(".fn")[$(this).index()]).addClass("hover");
+        switchModulePic($(this).index())
+        showTimer = setTimeout(function() {
+            $(".sub-nav").show();
+        }, 100);
+
+    }).mouseleave(function(){
+            clearTimeout(showTimer);
+            showTimer=null;
+
+            hideTimer=setTimeout(function(){
+                $(".sub-nav").hide();
+                $(".main-nav li").find("a").removeClass("hover");
+            },100);
+
+        });
+
+    $(".sub-nav").mouseenter(function(){
+        clearTimeout(hideTimer);
+        hideTimer=null;
+        showTimer = setTimeout(function() {
+            $(".sub-nav").show();
+        }, 100);
+    }).mouseleave(function(){
+            clearTimeout(showTimer);
+            showTimer=null;
+
+            hideTimer=setTimeout(function(){
+                $(".sub-nav").hide();
+                $(".main-nav li").find("a").removeClass("hover");
+                $(".navlist").find(".fn").removeClass("hover");
+            },100);
+
+     });
+
+    function switchModulePic(index){
+        var picUrl='';
+        switch(index){
+            case 0:
+                picUrl='/imgs/product.png';
+                break;
+            case 1:
+                picUrl='/imgs/about.png';
+                break;
+            case 2:
+                picUrl='/imgs/news.png';
+                break;
+            case 3:
+                picUrl='/imgs/working-team.png';
+                break;
+            case 4:
+                picUrl='/imgs/contact.png';
+                break;
+            default:
+                picUrl='/imgs/product.png';
+        }
+        $(".module-logo").attr("src",picUrl);
+    }
+})

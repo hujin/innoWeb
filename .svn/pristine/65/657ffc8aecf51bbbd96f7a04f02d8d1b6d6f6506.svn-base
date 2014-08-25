@@ -1,0 +1,17 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/base.css')
+    link(rel='stylesheet',href='/css/main.css')
+    link(rel='stylesheet',href='/css/portal.css')
+    script(type='text/javascript',src='/js/jquery-debug.js')
+    script(type='text/javascript',src='/js/portal.js')
+block content
+    include commons/nav
+    div(class='banner')
+        div(class='banner-cont') content
+    div(class='content')
+        include portal/portal-news
+        include portal/portal-exp
+        include portal/portal-team
+    include commons/footer

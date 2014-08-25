@@ -1,0 +1,25 @@
+div(class='left')
+    h1
+        em(class='gsdt-icon')
+        case type
+            when '1'
+                b 公司动态
+                i COMPANY NEWS
+            when '2'
+                b 市场动态
+                i BUSINESS NEWS
+            when '3'
+                b 产品动态
+                i PRODUCT NEWS
+            default
+                b 公司动态
+                i COMPANY NEWS
+    ul
+        each val,index in news
+            - var date = new Date(val.date).toISOString().substr(0,10);
+            li(class='news-list')
+                h2(class='title')
+                    b=date
+                    a(href='newshtml?id='+val.newID)=val.title
+                p=val.summary
+    include news-paging

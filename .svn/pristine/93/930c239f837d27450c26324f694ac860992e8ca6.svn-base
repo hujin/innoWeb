@@ -1,0 +1,8 @@
+div(class='banner-nav')
+    div(class='tn-cont')
+        - var array=['产品动态','市场动态','公司动态']
+        each val,index in banner
+            if ((index+1)==kind)
+                a(class='tn-list current')=val.name
+            else
+                a(class='tn-list')=val.name

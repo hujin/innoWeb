@@ -1,0 +1,13 @@
+div(class='new')
+    h2(class='title')
+        a MORE
+            em
+        b 最新资讯
+        i LATEST INFORMATION
+    ul
+        each val,index in newsData
+            li
+                span=val.date
+                a(href=val.url)
+                    b ·
+                    =val.title

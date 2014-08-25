@@ -1,0 +1,16 @@
+var jade = require('jade');
+
+var schema =require('../schema');
+
+var Menu=schema.Menu();
+
+exports.about = function(req,res){
+    var kind = req.query.kind ? req.query.kind : 1;
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        res.render('about', { title:'久拓|innosoft|久拓软件',
+            kind:kind,
+            menus:docs
+        });
+
+    });
+};

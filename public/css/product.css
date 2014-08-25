@@ -1,0 +1,10 @@
+.pro-cont{padding:30px 0}
+.pro-cont .pro-list{border-bottom:1px #e8e8e8 solid; padding:30px 0; clear:both; overflow:hidden}
+.pro-list .list-cont{width:50%; float:left; min-height:420px}
+.pro-list h1{font-size:36px; font-weight:bold; padding:20px 0}
+.pro-list p{font-size:14px; line-height:30px; width:440px}
+
+.pro-cont .pro-list-b{border-bottom:1px #e8e8e8 solid; padding:30px 0; clear:both; overflow:hidden}
+.pro-list-b .list-cont{width:50%; float:left; min-height:420px}
+.pro-list-b h1{font-size:36px; font-weight:bold; padding:20px 0; margin-left:70px}
+.pro-list-b p{font-size:14px; line-height:30px; margin-left:70px}

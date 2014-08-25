@@ -1,0 +1,34 @@
+- var engage={renshu:'4人',xueli:'本科',gongzuojy:'一年以上',xinzidy:'面议'};
+-for (var i = 0; i < teams.length; i++)
+    -var team = teams[i]
+    -var job = team.job;
+    div(class='teamlist')
+        h2
+            em 人员：
+                -for (var j = 0; j < team.teamMembers.length; j++)
+                 a.user-name=team.teamMembers[j].memNickname
+            a(name='name'+team.teamID,id=team.teamID)
+            b=team.teamName
+        p(class='team-text')=team.teamDesc
+        -if(job)
+         h3
+            input(type='button',class='btn')
+         div(class='team-engage')
+             p='岗位名称：' + job.jobName
+             p
+                ='招聘人数： '
+                = job.jobNum + '人'
+                ='　　　　　　'
+                ='学历要求：'
+                = job.jobEdu
+                br
+                ='工作经验：'
+                = job.jobExp + '年以上'
+                ='　　　　'
+                ='工资待遇：'
+                = job.jobPay
+                    p &nbsp;
+                ='职位描述'
+                    br
+                ='岗位要求：'
+                !=job.jobReq

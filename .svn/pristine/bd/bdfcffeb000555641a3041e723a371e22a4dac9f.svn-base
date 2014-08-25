@@ -1,0 +1,14 @@
+div(class='team')
+    h2(class='title')
+        b 团队空间
+        i TEAM SPACE
+    img(src='/imgs/team.jpg',border='0',usemap='#Map')
+    map#Map(name='Map')
+        area(shape='circle',coords='209,60,6',href='#')
+    h3
+        b 久拓论坛
+        i FORUM
+    p 分享最新行业资讯、探讨前沿技术动态，增加员工互动...
+    em
+        a
+            img(src='/imgs/enter-icon.png')

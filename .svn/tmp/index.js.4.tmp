@@ -1,0 +1,87 @@
+
+/*
+ * GET home page.
+ */
+
+var portal = require('./portal'),
+    about = require('./about'),
+    contact = require('./contact'),
+    news = require('./news'),
+    product = require('./product'),
+    team = require('./team');
+
+exports.about=function(req,res){
+    about.about(req,res);
+}
+
+<<<<<<< .mine
+exports.team=function(req,res){
+    team.team(req,res);
+}
+=======
+exports.news = function(req,res){
+    var kind = req.query.kind ? req.query.kind : 1,//新闻类型
+        page = req.query.page ? req.query.page : 1,//新闻分页
+        crumbs=[];
+    var start = (page-1)*10;//从第几条开始
+    switch(kind){
+        case '1':
+            crumbs.push('公司动态');
+            break;
+        case '2':
+            crumbs.push('市场动态');
+            break;
+        case '3':
+            crumbs.push('产品动态');
+            break;
+    }
+    console.log(crumbs);
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        //正文内容查询
+        News.find({type:kind},null,{sort: {date: -1},skip:start,limit :6},function(err,news){
+            //右侧及底部内容添加
+            //参数(分页,类型,menu对象结果集,新闻对象结果集,res对象,url)
+            initContentForNews(page,kind,docs,news,crumbs,res,'news');
+        })
+    });
+};
+>>>>>>> .r2863
+
+exports.teamActivity=function(req,res){
+    team.teamActivity(req,res);
+}
+
+
+exports.Activity=function(req,res){
+    team.Activity(req,res);
+}
+
+exports.ActivityChild=function(req,res){
+    team.ActivityChild(req,res);
+}
+
+
+
+exports.news=function(req,res){
+    news.news(req,res);
+}
+
+exports.newshtml=function(req,res){
+    news.newshtml(req,res);
+}
+
+exports.newsAddVotes=function(req,res){
+    news.newsAddVotes(req,res);
+}
+
+exports.product=function(req,res){
+    product.product(req,res);
+}
+
+exports.contact=function(req,res){
+    contact.contact(req,res);
+}
+
+exports.portal=function(req,res){
+    portal.portal(req,res);
+}

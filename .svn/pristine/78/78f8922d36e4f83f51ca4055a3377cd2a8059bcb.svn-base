@@ -1,0 +1,15 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/teamActivity.css')
+    script(type='text/javascript',src='/js/teamActivity.js')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content')
+            div(class='container')
+                include teamActivity/teamActivity-content
+
+    include teamActivity/teamActivity-mask
+    include commons/footer

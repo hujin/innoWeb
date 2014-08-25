@@ -1,0 +1,67 @@
+
+/*
+ * GET home page.
+ */
+
+var portal = require('./portal'),
+    about = require('./about'),
+    contact = require('./contact'),
+    news = require('./news'),
+    product = require('./product'),
+    team = require('./team'),
+    invite = require('./invite');
+
+exports.about=function(req,res){
+    about.about(req,res);
+}
+
+exports.team=function(req,res){
+    team.team(req,res);
+}
+
+exports.teamActivity=function(req,res){
+    team.teamActivity(req,res);
+}
+
+
+exports.Activity=function(req,res){
+    team.Activity(req,res);
+}
+
+exports.ActivityChild=function(req,res){
+    team.ActivityChild(req,res);
+}
+
+
+
+exports.news=function(req,res){
+    news.news(req,res);
+}
+
+exports.newshtml=function(req,res){
+    news.newshtml(req,res);
+}
+
+exports.newsAddVotes=function(req,res){
+    news.newsAddVotes(req,res);
+}
+
+exports.product=function(req,res){
+    product.product(req,res);
+}
+
+exports.contact=function(req,res){
+    contact.contact(req,res);
+}
+
+exports.invite=function(req,res){
+    invite.invite(req,res);
+}
+
+exports.getPost=function(req,res){
+    invite.getPost(req,res);
+}
+
+exports.portal=function(req,res){
+    portal.portal(req,res);
+}

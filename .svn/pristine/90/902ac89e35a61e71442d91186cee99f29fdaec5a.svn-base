@@ -1,0 +1,71 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/contact.css')
+    script(src='http://api.map.baidu.com/api?v=1.4',type='text/javascript')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content',style='padding-top:40px; position:relative;')
+            h1
+                em(class='lxwm-icon')
+                b 联系我们
+                i CONTACT US
+            div(class='container')
+                div(class='map',id='container')
+                div(class='company-mag')
+                    dl(class='company-mag-list')
+                        dt
+                            b 公司名称
+                            ='  Company:'
+                        dd 杭州久拓软件有限公司
+                        dd(style='font-size:12px') Hangzhou Innovation Software CO.,LTD
+                    dl(class='company-mag-list')
+                        dt
+                            b 公司地址
+                            ='  Address:'
+                        dd 杭州市滨江区秋溢路288号东莞高新科技园1号楼105室
+                        dd(style='font-size:12px') Room 105,  Building No.1, No.288, Qiuyi Road, Binjiang District, Hangzhou City
+                    dl(class='company-mag-list')
+                        dt
+                            b 公司邮箱
+                            ='  E-mail:'
+                        dd admin@9tuo.com
+                    dl(class='company-mag-list')
+                        dt
+                            b 联系电话
+                            ='  TEL & FAX:'
+                        dd TEL: 0571-87677660       FAX:0571-87677662
+
+
+
+
+            //div(class='contact-cont')
+                h1(id='1')
+                    em(class='icon-us')
+                    ='联系我们'
+                div(class='cont',style='height:250px')
+                    div(class='er-pic')
+                        img(src='/imgs/contact/er.png')
+                    p
+                        b 公司名称:
+                        ='杭州久拓软件有限公司'
+                    p
+                        b 公司地址:
+                        ='杭州市滨江区春波路1288号东冠高新科技园1号楼105室'
+                    p
+                        b 公司邮箱:
+                        ='innosoft@9tuo.com'
+                    p
+                        b 公司电话:
+                        ='0571-87677660'
+                h1(id='2')
+                    em(class='icon-map')
+                    ='地图导航'
+                div(class='cont')
+                    div(class='map')
+                        img(width='860' height='375' src='http://api.map.baidu.com/staticimage?width=860&height=375&center=120.206934,30.195157&markers=120.206934,30.195157&zoom=15&scale=2&markerStyles=-1,http://www.9tuo.com:8888/data/attachment/location.png')
+                        img(width='860' height='375' src='/imgs/location.png')
+    script(src='/js/contact.js',type='text/javascript')
+    include commons/footer

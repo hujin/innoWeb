@@ -1,0 +1,22 @@
+.about-cont{padding:30px; position:relative}
+.about-cont .logo{position:absolute; right:100px; top:70px}
+.about-cont h1{font-size:30px; font-weight:bold;padding-bottom:20px; position:relative; }
+h1 em{width:32px; height:32px; display:block; position:absolute; left:-40px; top:8px; background-image:url('../imgs/web-icons.png'); background-repeat:no-repeat;}
+.about-cont h2{font-size:20px ;margin-bottom:20px; position:relative; padding:7px 0}
+h2 em{width:30px; height:30px; display:block; position:absolute; left:-30px; top:8px; background-image:url('../imgs/web-icons.png'); background-repeat:no-repeat;}
+.about-cont p{width:400px; font-size:14px; line-height:28px; min-height:120px}
+.icon-about{background-position:0 -90px}
+.icon-introduce{background-position:0 -120px}
+.icon-idea{background-position:0 -150px}
+.icon-environ{background-position:0 -180px}
+.icon-partner{background-position:0 -210px}
+
+.about-cont .img-list{width:330px; float:left}
+.about-cont .img-list .list{float:left; width:98px; height:76px; margin-right:10px; margin-bottom:10px}
+.about-cont .img-list .list a{display:block}
+.about-cont .img-list .list img{width:98px}
+.about-cont .img-cont{float:left; width:560px}
+
+.about-cont .par-list .plist{float:left; width:120px; height:60px; margin-right:10px; margin-bottom:10px}
+.about-cont .par-list .plist a{display:block}
+.about-cont .clear{overflow:hidden; clear:both; padding-bottom:20px}

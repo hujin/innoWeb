@@ -1,0 +1,21 @@
+.team-cont{padding:30px 0}
+.team-cont .team-img{height:280px; width:980px; padding-bottom:30px; border-bottom:2px #e3e3e3 solid}
+.team-cont .namelist{height:50px; padding:30px 0}
+.team-cont .namelist .list{width:180px; height:50px; float:left; margin-right:20px;}
+.team-cont .namelist .list a{display:block;width:180px; height:50px; background:#d1d1d1; line-height:50px; text-align: center; color:#FFF; font-size:26px; font-weight:bold}
+.team-cont .namelist .list a:hover{background:#0081cc}
+.team-cont .namelist .list .hover{background:#0081cc}
+.team-cont .teamlist{padding:30px 0 20px 0; border-bottom:1px #e3e3e3 solid; position:relative}
+.team-cont .teamlist .team-people{ width:409px; height:176px; position:absolute; right:0;top:100px; background:url('../imgs/team-bj.png') no-repeat}
+.teamlist .team-people span{float:left;}
+.teamlist .team-people span img{ height:140px; padding:15px; width:140px}
+.teamlist .team-people span p{ padding:15px; width:200px}
+.team-cont .teamlist h2{font-size:30px; margin-bottom:20px;}
+.team-cont .teamlist h2 em{float:right; font-size:16px; margin-top:40px}
+.team-cont .teamlist h2 em .user-name{margin-right:10px;}
+.team-cont .teamlist h2 b{font-size:55px}
+.team-cont .teamlist .team-text{text-indent:30px; font-size:14px; line-height:28px}
+.team-cont .teamlist h3{padding:20px 0}
+.team-cont .teamlist h3 .btn{float:right; background:url('../imgs/engage-btn.png') no-repeat; width:53px; height:20px; border:none}
+.team-cont .teamlist h3 .btn:hover{background:url('../imgs/engage-btn.png') 0 -20px}
+.team-cont .teamlist .team-engage{padding:20px; background:#ff8523; line-height:22px; color:#FFF; margin-top:20px}

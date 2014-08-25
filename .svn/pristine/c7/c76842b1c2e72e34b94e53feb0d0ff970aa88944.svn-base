@@ -1,0 +1,13 @@
+div(class='sub-nav')
+    div(class='nav-cont')
+        span(class='nav-img')
+            img(src='/imgs/product.png')
+        ul(class='navlist')
+            each Menu in docs
+                li.fn
+                    ul
+                        each subMenu in Menu.child
+                            li
+                                a(href=subMenu.url,target='_blank')
+                                    font='· '
+                                    =subMenu.name

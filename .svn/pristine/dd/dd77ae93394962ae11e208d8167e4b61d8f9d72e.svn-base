@@ -1,0 +1,60 @@
+div(class='engage-module')
+    div(class='engage-salary')
+        h2(class='team-title') 薪资福利
+        div(class='salary-contant')
+            h3(class='salary-h3')
+                em(class='gz-icon')
+                ='有竞争力的薪酬制度'
+            div(class='salary-cont')
+                em(class='pic')
+                ul
+                    li(class='list')
+                        b 薪资待遇
+                        ='由基本工资和绩效工资组成，按照职级构建系统的薪酬体系，给予有竞争力的薪资待遇。'
+                    li(class='list')
+                        b 各类补贴
+                        ='午餐补贴，交通补贴，通讯补贴，电脑补贴，差旅补贴。'
+                    li(class='list')
+                        b 专项奖励
+                        strong 商务提成，项目奖金，产品奖金，技术促进奖
+                        ='，荐才奖，建言奖，荣誉奖，'
+                        strong 优秀员工奖
+                        ='，特别奖，年终奖。'
+                    li(class='list')
+                        b 多渠道的晋升机会
+                        dl
+                            dt 试用期间表现优异者给予职级重新定位。
+                            dt 每年两次考核，绩效考核持续优秀的员工享受晋升机会。
+                            dt 知识结构和能力有重大提升者给予晋升。
+                            dt 通过中级及以上职业资格认证者给予晋升。
+                            dt 为公司争得荣誉或为公司发展做出特殊贡献者给予晋升。
+            h3(class='salary-h3')
+                em(class='sb-icon')
+                ='完善优厚的福利保障'
+            div(class='salary-cont')
+                ul
+                    li(class='list float')
+                        b 社会保险
+                        dl
+                            dt 按照国家规定办理养老保险、医疗保险、工伤保险、失业保险、生育保险。
+                    li(class='list float')
+                        b 公积金
+                        dl
+                            dt 按照国家规定缴纳住房公积金。
+                    li(class='list float')
+                        b 礼品礼金
+                        dl
+                            dt 节日礼金（六一、中秋、春节）、生日贺礼、结婚生子贺礼。
+                    li(class='list float')
+                        b 活动基金
+                        dl
+                            dt 设立员工活动专项基金。
+                    li(class='list float')
+                        b 其他福利
+                        dl
+                            dt 带薪假、高温补贴、年度旅游、教育培训、体检。
+                    li(class='list float')
+                        b 助学基金
+                        dl
+                            dt 家庭中直系亲属上学经济困难者全额资助学费。
+    div(class='module-bottom')

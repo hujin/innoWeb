@@ -1,0 +1,20 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/invite.css')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content')
+            div(class='title',style='margin-top:30px')
+                h1
+                    em(class='jzzx-icon')
+                    b 家族招新
+                    i FAMILY RECRUITMENT
+            include invite/invite-explain
+            include invite/invite-welfare
+            include invite/invite-post
+    include commons/footer
+block bottom
+    script(type='text/javascript',src='/js/invite.js')

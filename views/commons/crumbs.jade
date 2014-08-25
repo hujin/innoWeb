@@ -1,0 +1,9 @@
+div(class='crumbs')
+    div(class='crumbs-list')
+        a(class='crumbs-item crumbs-em',href='/') 首页
+        - for(var i=0;i<crumbs.length;i++)
+            ='>'
+            if((i+1)==crumbs.length)
+                a(class='crumbs-item crumbs-current')=crumbs[i]
+            else
+                a(class='crumbs-item')=crumbs[i]

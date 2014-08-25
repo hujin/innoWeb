@@ -1,0 +1,34 @@
+- var engage={renshu:'4人',xueli:'本科',gongzuojy:'一年以上',xinzidy:'面议'};
+
+
+div(class='teamlist')
+    h2
+        em 人员：
+            a.user-name vincent
+            a.user-name arial
+            a.user-name tifa
+        a(name='name1',id='name1')
+        b UED
+        ='.user Experience Design'
+    p(class='team-text') 为你呈现的，是我们想打动你的.不光是眼球，更希望内心共鸣.一直在行走，搞个或淡然，都是脚下踏实的步伐.一直在努力，成功或失败，最好的体验设计永远是下一个！
+    p(class='team-text') 我们致力于互联网视觉传达、交互设计、前端开发，关注用户体验研究、品牌形象管理、创意产业研发，我们只想做地球上最好的UED!
+    h3
+        input(type='button',class='btn')
+    div(class='team-engage')
+        p
+            ='招聘人数： '
+            = engage.renshu
+            ='　　　　　　'
+            ='学历要求：'
+            = engage.xueli
+            br
+            ='工作经验：'
+            = engage.gongzuojy
+            ='　　　　'
+            ='工资待遇：'
+            = engage.xinzidy
+                p &nbsp;
+            ='职位描述'
+                br
+            ='岗位职责：'
+            ='负责产品及应用的交互设计工作;结合可用性测试结果，完成界面交互行为和功能的改良，提高产品的易用性;对现有产品的可用性测试和评估，提出改进方案，持续优化产品的用户体验;负责参与产品建设;参与界面设计流程的完善和优化工作;任职资格：本科以上学历，计算机或美术等相关专业，有3年以上大型网站界面设计经验优先;有网页设计、软件界面设计经验，对交互设计有较深的理解和大量的实践，可以独立完成整个设计过程;有较强的审美设计能力，有良好的创意理念和页面版式规划能力，能很好的把握色彩与网页布局，熟悉用户体验;逻辑思维能力强，熟练掌握业务需求分析、产品需求分解的技巧;良好的沟通能力和团队协作能力，有责任心，能认真完成每一项工作;精通photoshop、flash、illustrator、dreamweaver等网页设计工具;有完整门户网站页面设计工作经验优先考虑(应聘时请携带相关作品）'

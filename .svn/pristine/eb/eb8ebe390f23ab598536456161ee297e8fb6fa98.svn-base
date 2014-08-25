@@ -1,0 +1,11 @@
+h2
+    em(class='icon-environ')
+    公司环境
+div(class='clear')
+    ul(class='img-list')
+        -for (var x=0;x<12;x++)
+         li(class='list')
+            a
+                img(src='/imgs/overview-' + (x+1) +'.jpg')
+    div(class='img-cont')
+        img(src='/imgs/overview-2.jpg')

@@ -1,0 +1,13 @@
+div(class='team')
+    h2(class='title')
+        b 团队空间
+        i TEAM SPACE
+    a(href='http://www.9tuo.com:8082/' target='_blank')
+        img(src='/imgs/team-portal.jpg',border='0')
+    h3
+        b 久拓论坛
+        i FORUM
+    p 分享最新行业资讯、探讨前沿技术动态，增加员工互动...
+    em
+        a(href='http://www.9tuo.com:8888/' target='_blank')
+            img(src='/imgs/enter-icon.png')

@@ -1,0 +1,16 @@
+div(class='page')
+
+    -var pages = Math.round(total/6);
+    if(parseInt(page)<=1)
+        a <
+    else
+        a(href='news?page='+ (parseInt(page)-1) +'&kind='+ kind +'') <
+    -for(var i=0;i<pages;i++)
+        if((i+1)==page)
+            a(class='hover',href='news?page='+ (i+1) +'&kind='+ kind +'')=(i+1)
+        else
+            a(href='news?page='+ (i+1) +'&kind='+ kind +'')=(i+1)
+    if(parseInt(page)>=pages)
+        a >
+    else
+        a(href='news?page='+ (parseInt(page)+1) +'&kind='+ kind +'') >

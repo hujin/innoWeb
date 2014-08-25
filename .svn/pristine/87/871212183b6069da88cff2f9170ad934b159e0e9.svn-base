@@ -1,0 +1,59 @@
+div(class='engage-module')
+    div(class='engage-hr-a')
+        h2(class='team-title') 久拓人力资源的方方面面
+            h3(class='title-h3',style='margin-left:55px') 写在前面的话
+            div(class='engage-cont')
+                h3(class='title-h3') 员工成长
+                h4(class='title-h4')
+                    b 培训计划
+                    ='构建系统、持续的培训计划，使你的能力结构不断优化、能力层次不断提升。'
+                div(class='growing-list')
+                    em(class='icon-a')
+                    p 入职培训：快速了解融入团队，掌握岗位技能。
+                    p
+                        a 公司简介
+                        a 企业文化
+                        a 制度流程
+                        a 岗位培训
+                div(class='growing-list')
+                    em(class='icon-d')
+                    p 职业素养培训：帮你成为一名优秀职业人。
+                    p
+                        a 经营自己
+                        a 职场技能
+                div(class='growing-list')
+                    em(class='icon-c')
+                    p 专业技能培训：深化专业知识，拓展知识面。
+                    p
+                        a Java开发
+                        a 数据开发
+                        a 前端开发
+                        a 需求分析
+                        a 系统设计
+                        a ......
+                div(class='growing-list')
+                    em(class='icon-d')
+                    p 管理能力培训：理论结合实战，提升管理技能。
+                    p
+                        a 项目管理
+                        a 产品管理
+                        a ......
+                div(class='growing-table')
+                    div(class='table-text')
+                        b "1对1"业务指导
+                        p 入职即指派专人进行指导，使你融入久拓变得更为容易。
+                    div(class='table-text')
+                        b 知识分享会
+                        p 每周一期的知识分享会，小伙伴们、业界达人分享知识的硕果。
+                    div(class='table-text')
+                        b 久拓公开课
+                        p 公司相关领域资深人士、业界达人进行系统、专业的知识分享、交流。
+                    div(class='table-text')
+                        b 外部培训交流
+                        p 定向培训班,参与业界各种知识分享盛会（InfoQ ,AWDC,GDG…）
+    div(class='engage-hr-b')
+        h4(class='title-h4')
+            b 职业发展
+        p(class='text-p')
+            strong 多维度发展方向选择，以个人职业规划为主导
+            ='，结合公司的发展需求，加以系统的专业技能培训，实现能力结构的深入优化，能力层次的不断提升，个人和公司的双赢。'

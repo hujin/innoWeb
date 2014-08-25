@@ -1,0 +1,38 @@
+var jade = require('jade');
+var schema =require('../schema');
+
+var Menu=schema.Menu(),
+    Product=schema.Product();
+
+exports.product = function(req,res){
+    var id =req.query.id ? req.query.id : 1,
+        productId = req.query.pid ? req.query.pid : -1;
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        var menus=docs;
+
+        Product.find({moduleID:id},function(err,docs){
+            console.log(docs[0].moduleProduct[productId]);
+            var products = docs[0].moduleProduct;
+            var banners = [];
+            var product = products[0];//默认显示第一个产品
+            if(productId == -1) {//默认
+                productId = product.productID;
+            }
+            for(var i = 0; i < products.length; i++) {
+                banners.push({name:products[i].productName,id:products[i].productID,url:"product?id=" + id + "&pid=" + products[i].productID});
+                if(products[i].productID == productId) {
+                    product = products[i];//当前页要显示的产品
+                }
+            }
+
+            res.render('product', { title:'久拓|innosoft|久拓软件',
+                banner:banners,
+                kind:productId,
+                menus:menus,
+                product:product
+            });
+        })
+
+
+    });
+};

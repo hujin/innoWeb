@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='Shortcut Icon',href='')
+    link(rel='stylesheet',href='/css/base.css')
+    link(rel='stylesheet',href='/css/main.css')
+    script(type='text/javascript',src='/js/jquery-debug.js')
+    script(type='text/javascript',src='/js/commons.js')
+    block head
+  body
+    block content

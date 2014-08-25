@@ -1,0 +1,17 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/news.css')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content clear',style='padding-top:30p')
+            //左边内容
+            include newsh/leftContent
+            //右边内容
+            include newsh/newshRightContent
+            //iframe(src='/html/' + kind + '.html' style='border:0;width:100%;min-height:500px;')
+    include commons/footer
+block bottom
+    script(type='text/javascript',src='/js/newshtml.js')

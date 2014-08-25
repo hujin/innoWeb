@@ -1,0 +1,55 @@
+$(function(){
+    var showTimer,hideTimer,index;
+    $(".main-nav li").mouseenter(function(){
+        index=$(this).index();
+        if(index>0 && index !=5){
+            clearTimeout(hideTimer);
+            hideTimer=null;
+            $(".main-nav li").find("a").removeClass("hover");
+
+            $(this).find("a").addClass("hover");
+            $(".sub-nav ul").hide().eq((index-1)).show();
+
+            $(".sub-nav").css("left", (515 + (95*(index-1))) + "px");
+
+            showTimer = setTimeout(function() {
+
+                $(".sub-nav").show();
+            }, 200);
+        }
+
+
+    }).mouseleave(function(){
+            clearTimeout(showTimer);
+            showTimer=null;
+
+            hideTimer=setTimeout(function(){
+                $(".sub-nav").hide();
+                $(".main-nav li").find("a").removeClass("hover");
+            },200);
+
+        });
+
+    $(".sub-nav").mouseenter(function(){
+        clearTimeout(hideTimer);
+        hideTimer=null;
+        showTimer = setTimeout(function() {
+            $(".sub-nav").show();
+        }, 200);
+    }).mouseleave(function(){
+            clearTimeout(showTimer);
+            showTimer=null;
+
+            hideTimer=setTimeout(function(){
+                $(".sub-nav").hide();
+                $(".main-nav li").find("a").removeClass("hover");
+            },200);
+
+     });
+
+
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        unescape("%3Cspan id='cnzz_stat_icon_1000269402'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000269402%26show%3Dpic' type='text/javascript'%3E%3C/script%3E");
+
+
+})

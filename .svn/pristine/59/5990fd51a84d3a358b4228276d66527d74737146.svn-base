@@ -1,0 +1,4 @@
+div(class='footer')
+    div(class='footer-cont')
+        p Copyright ©1996-2013 Innosoft Corporation, All Rights Reserved
+            br 京ICP备案11021163号-6 | 京公网安备 110108008330

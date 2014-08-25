@@ -1,0 +1,9 @@
+h2(id='4')
+    em(class='icon-partner')
+    合作伙伴
+div(class='clear')
+    ul(class='par-list')
+        -for (var x=0;x<14;x++)
+            li(class='plist')
+                a
+                    img(src='/imgs/par-img01.jpg')

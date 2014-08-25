@@ -1,0 +1,43 @@
+$(function(){
+    var showTimer,hideTimer;
+    $(".main-nav li").mouseenter(function(){
+        clearTimeout(hideTimer);
+        hideTimer=null;
+        $(".main-nav li").find("a").removeClass("hover");
+
+        $(this).find("a").addClass("hover");
+        $(".navlist").find(".fn").removeClass("hover");
+        $($(".navlist").find(".fn")[$(this).index()]).addClass("hover");
+        showTimer = setTimeout(function() {
+            $(".sub-nav").show();
+        }, 100);
+
+    }).mouseleave(function(){
+            clearTimeout(showTimer);
+            showTimer=null;
+
+            hideTimer=setTimeout(function(){
+                $(".sub-nav").hide();
+                $(".main-nav li").find("a").removeClass("hover");
+            },100);
+
+        });
+
+    $(".sub-nav").mouseenter(function(){
+        clearTimeout(hideTimer);
+        hideTimer=null;
+        showTimer = setTimeout(function() {
+            $(".sub-nav").show();
+        }, 100);
+    }).mouseleave(function(){
+            clearTimeout(showTimer);
+            showTimer=null;
+
+            hideTimer=setTimeout(function(){
+                $(".sub-nav").hide();
+                $(".main-nav li").find("a").removeClass("hover");
+                $(".navlist").find(".fn").removeClass("hover");
+            },100);
+
+        })
+})

@@ -1,0 +1,10 @@
+div(class='sub-panel')
+    div(class='sub-nav')
+        span(class='sub-nav-icon')
+        each Menu in menus
+            -if(Menu.child.length)
+                ul
+                    each subMenu in Menu.child
+                        li
+                            a(href=subMenu.url,target='_self')
+                                =subMenu.name

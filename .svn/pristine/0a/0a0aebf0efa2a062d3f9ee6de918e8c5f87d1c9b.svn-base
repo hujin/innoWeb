@@ -1,0 +1,25 @@
+div(class='mask hide')
+    a(class='iconfont mask-close') &#x3445;
+    div(class='mask-content')
+        div(class='mask-container')
+            div(class='mask-hd')
+                div(class='mask-title')
+                    h2 2013活动标题
+                div(class='mask-share')
+                    span(class='mask-date') 发布日期:2014-02-14
+                    span
+                        label 分享到:
+                        a(class='wb-icon',title='分享到QQ微博')
+                        a(class='qzone-icon',title='分享到QQ空间')
+                        a(class='qq-icon',title='分享给QQ好友')
+                        a(class='sina-icon',title='分享到新浪微博')
+            div(class='mask-body')
+                div(class='mask-prev')
+                    a(class='mask-prev-icon')
+                div(class='mask-img-content')
+                    img(src='/imgs/activity/1.jpg')
+                div(class='mask-next')
+                    a(class='mask-next-icon')
+            div(class='mask-footer')
+                div(class='mask-summary')
+                    span 活动内容活动内容活动内容活动内容活动内容活动内容活动内容活动内容活动内容活动内容活动内容活动内容

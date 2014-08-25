@@ -1,0 +1,14 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/news.css')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content clear',style='padding-top:30p')
+            //正文内容
+            include news/news-list
+            //右边内容
+            include newsh/rightContent
+    include commons/footer

@@ -1,0 +1,21 @@
+.news-cont{padding:30px 60px}
+.news-cont h1{font-size:30px; font-weight:bold;padding-bottom:20px; position:relative; border-bottom:2px #e3e3e3 solid}
+h1 em{width:32px; height:32px; display:block; position:absolute; left:-40px; top:8px; background-image:url('../imgs/web-icons.png'); background-repeat:no-repeat;}
+.icon-us{background-position:0 -60px}
+.icon-map{background-position:0 -30px}
+.icon-news{background-position:0 0px}
+.news-cont .list{ padding:15px 0; border-bottom:1px #e3e3e3 solid; clear:both; overflow:hidden}
+.news-cont .list b{display:block; width:95px; float:left; margin-left:5px}
+.news-cont .list .p{float:left; width:710px;}
+.news-cont .list .p h2{ display:none}
+.news-cont .list .p h2{font-weight:normal;}
+.news-cont .list .p p{overflow:hidden;white-space:nowrap; width:710px; text-overflow:ellipsis;}
+.news-cont .list:hover{background:#f0f4f8}
+.news-cont .list:hover .p h2{font-weight: bold; display:block;margin-bottom:5px; font-size:14px}
+.news-cont .list:hover .p p{display: block; white-space:inherit}
+.news-cont .list em{display:block; width:8px; height:6px; background:url('../imgs/jiant.png');float:left; margin-left:20px; margin-top:8px}
+.news-cont .list:hover em{background:url('../imgs/jiant.png') 0 -6px}
+.news-cont .page{padding:30px 0}
+.news-cont .page a{display:block; width:17px; height:17px ; border-radius:2px; float:left; margin:0 5px; background:#000; color:#FFF;  text-align:center; line-height:17px}
+.news-cont .page a:hover{ background:#ff8e20}
+.news-cont .page a.current{background:#ff8e20}

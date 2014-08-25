@@ -1,0 +1,18 @@
+var jade = require('jade');
+
+var schema =require('../schema');
+
+var Menu=schema.Menu();
+
+exports.contact = function(req,res){
+
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        var crumbs=['联系我们'];
+
+        res.render('contact', { title:'久拓|innosoft|久拓软件',
+            menus:docs,
+            crumbs:crumbs
+        });
+
+    });
+};

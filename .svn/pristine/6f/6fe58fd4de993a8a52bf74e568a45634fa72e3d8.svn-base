@@ -1,0 +1,16 @@
+var jade = require('jade');
+var schema =require('../schema');
+
+var Menu=schema.Menu(),
+    News=schema.News();
+exports.portal = function(req, res){
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        News.find(null,null,{sort: {date: -1},skip:0,limit :6},function(err,hotNewsList){
+            res.render('portal', { title:'久拓|innosoft|久拓软件',
+                newsData:hotNewsList,
+                menus:docs
+            });
+        });
+    });
+
+};

@@ -1,0 +1,14 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/base.css')
+    link(rel='stylesheet',href='/css/main.css')
+    link(rel='stylesheet',href='/css/about.css')
+    script(type='text/javascript',src='/js/jquery-debug.js')
+    script(type='text/javascript',src='/js/commons.js')
+block content
+    include commons/nav
+    div(class='main')
+        div(class='content')
+            iframe(src='/html/' + kind + '.html' style='border:0;width:100%;min-height:500px;')
+    include commons/footer

@@ -1,0 +1,20 @@
+div(class='left')
+    div(class='news-mag')
+        //返回数据news中获取内容
+        each val,index in news
+            //- var date = new Date(val.date).toISOString().substr(0,10)+" "+new Date(val.date).toLocaleTimeString();
+            h1(class='title')=val.title
+                p
+                    span
+                        label 分享到:
+                        a(class='wb-icon')
+                        a(class='qzone-icon')
+                        a(class='qq-icon')
+                        a(class='sina-icon')
+                    =val.date+"  "+val.addUser
+            div(class='news-cont')
+                    h2
+                        b=val.summary
+                    p=val.content
+        //底部内容
+        include bottomContent

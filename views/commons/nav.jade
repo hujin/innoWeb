@@ -1,0 +1,13 @@
+div(class='header')
+    div(class='nav')
+        h1
+            a(href='portal',title='杭州久拓软件')
+                img(class='logo',src='/imgs/logo.png',alt='innosoft')
+        ul(class='main-nav')
+            - if(menus.length)
+                each Menu in menus
+                    li
+                        a(href=Menu.url)
+                            =Menu.name
+include nav-sub
+

@@ -1,0 +1,69 @@
+var jade = require('jade');
+var schema =require('../schema');
+
+var Menu=schema.Menu(),
+    Team=schema.Team(),
+    Job=schema.Job(),
+    Activities=schema.Activities();
+
+exports.team = function(req,res){
+    var kind = req.query.kind ? req.query.kind : 1;
+    var crumbs = ['团队风貌'];
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,menus){
+        Team.find(null,null,{sort: {order: 1}},function(err,teams){
+            Job.find(function(err,jobs){
+                //把job放到team中,一个team只能有一个job
+                for (var i = 0; i < teams.length; i++) {
+                    var team = teams[i]
+                    for (var j = 0; j < jobs.length; j++) {
+                        if(team.teamID == jobs[j].teamID) {
+                            team.job = jobs[j];
+                        }
+                    }
+                }
+                res.render('team', { title:'久拓|innosoft|久拓软件',
+                    kind:kind,
+                    menus:menus,
+                    teams:teams,
+                    crumbs:crumbs
+                });
+            })
+        })
+    });
+};
+
+exports.teamActivity = function(req,res){
+    var crumbs = ['团队活动'];
+
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,menus){
+        Activities.find(null,null,{sort: {date: -1},limit :8},function(err,activities){
+            res.render('teamActivity', { title:'久拓|innosoft|久拓软件',
+                menus:menus,
+                crumbs:crumbs,
+                activities:activities
+            });
+        });
+
+    });
+};
+
+exports.Activity =function(req,res){
+    var skip =  req.query.skip ? req.query.skip : 6;
+    Activities.find(null,null,{sort: {date: -1},skip:skip,limit :4},function(err,activities){
+        res.json(activities);
+    })
+};
+
+exports.ActivityChild =function(req,res){
+    var ID = req.query.ID ? parseInt(req.query.ID) : 1 ;
+    var votes = req.query.votes ? (parseInt(req.query.votes)+1) : 1;
+
+    Activities.update({ activityID: ID },{ $set: { votes: votes }},function(err,num){
+
+    });
+
+    Activities.find({activityID:ID},function(err,activities){
+        res.json(activities);
+    });
+
+};

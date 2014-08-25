@@ -1,0 +1,6 @@
+div(class='page')
+    a(href='news?kind=2') <
+    a(class='hover',href='news?kind=1?type=1') 1
+    a(href='news?kind=2?type=1') 2
+    a(href='news?kind=3?type=1') 3
+    a >

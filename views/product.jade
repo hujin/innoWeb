@@ -1,0 +1,12 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/product.css')
+block content
+    include commons/nav
+    div(class='main')
+        div(class='content')
+            div(class='pro-cont')
+                include product/product-list
+    include commons/banner-nav
+    include commons/footer

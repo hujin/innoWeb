@@ -1,0 +1,22 @@
+div(class='left')
+    div(class='news-mag')
+        each val,index in news
+            - var date = new Date(val.date).toISOString().substr(0,10);
+            div(class='news-hd')
+                h1(class='news-title')=val.title
+                div(class='news-title-bar')
+                    div(class='news-info')
+                        span(class='news-date')=date
+                        span(class='news-author')=val.author
+                        span(class='news-votes',data-votes=''+ val.votes +'',data-id=''+ val.newID +'')='浏览量:'+val.votes
+                    div(class='news-share')
+                        span
+                            label 分享到:
+                            a(class='wb-icon',title='分享到QQ微博')
+                            a(class='qzone-icon',title='分享到QQ空间')
+                            a(class='qq-icon',title='分享给QQ好友')
+                            a(class='sina-icon',title='分享到新浪微博')
+            div(class='news-cont')
+                div(class='news-summary')!='[<strong>摘要</strong>]' + val.summary
+                p!= val.content
+        include bottomContent

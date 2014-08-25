@@ -1,0 +1,242 @@
+
+/*
+ * GET home page.
+ */
+var mongoose =require('mongoose');
+
+var Schema= mongoose.Schema;
+var ObjectId=Schema.objectId;
+
+var menuSchema=new Schema({
+    menuID:Number,
+    name:String,
+    url:String,
+    child:[{subMenuID:Number,name:String,url:String,status:Number}],
+    status:Number
+});
+
+var Menu=mongoose.model('Menu',menuSchema);
+
+var productSchema=new Schema({
+    moduleID:Number,
+    moduleName:String,
+    moduleProduct:[
+        {
+            productID:Number,
+            productName:String,
+            productFuns:[
+                {
+                    funID:Number,
+                    funName:String,
+                    funDesc:String,
+                    imgUrl:String,
+                    order:Number
+                }
+            ]
+        }
+    ]
+});
+
+var Product=mongoose.model('Product',productSchema);
+
+var teamSchema=new Schema({
+    teamID:Number,
+    teamName:String,
+    teamDesc:String,
+    teamMembers:[
+        {
+            memID:Number,
+            memNickname:String,
+            memPosition:String,
+            memSign:String,
+            memDesc:String,
+            memImgUrl:String
+        }
+    ],
+    order:Number
+});
+
+var Team=mongoose.model('Team',teamSchema);
+
+var jobSchema=new Schema({
+    jobID:Number,
+    teamID:Number,
+    jobName:String,
+    jobSendDate:String,
+    jobNum:Number,
+    jobReq:String,
+    jobEdu:String,
+    jobPay:String,
+    jobExp:Number,
+    jobDesc:String
+});
+
+var Job=mongoose.model('Job',jobSchema);
+
+var newSchema = new Schema({
+    newID:Number,
+    title:String,
+    type:Number,
+    typeName:String,
+//    date:{type:Date,default:Date.now},
+    date:String,
+    summary:String,
+    content:String,
+    visitCount:Number,
+    addUser:String
+});
+
+var News=mongoose.model('News',newSchema);
+
+exports.portal = function(req, res){
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+            res.render('portal', { title:'久拓|innosoft|久拓软件',newsData:[{date:'2013-12-31',title:'全省综合交通应急指挥体系建设推进会在杭州召开',url:'newshtml?id=1'},
+                {date:'2013-12-30',title:'浙江交通网站获年度中国政务网站领先奖',url:'newshtml?id=2'},
+                {date:'2013-08-09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+                {date:'2013-08-09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+                {date:'2013-08-09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+                {date:'2013-08-09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'}],
+                menus:docs
+            });
+    });
+
+};
+
+
+exports.contact = function(req,res){
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        res.render('contact', { title:'久拓|innosoft|久拓软件',
+            menus:docs
+        });
+
+    });
+};
+
+exports.news = function(req,res){
+    var query = req.query.kind ? req.query.kind : 1;//页数
+    var str = query.split("?");
+    var kind = str[0];
+    var type = str[1].split("=")[1] ? str[1].split("=")[1] : 1;//类型
+    var start = (kind-1)*10;//从第几条开始
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        //正文内容查询
+        News.find({type:type},null,{sort: {visitCount: 1},skip:start,limit :6},function(err,news){
+            //右侧及底部内容添加
+            //参数(分页,类型,menu对象结果集,新闻对象结果集,res对象,url)
+            initContentForNews(kind,type,docs,news,res,'news');
+        })
+    });
+};
+
+var jade = require('jade');
+exports.newshtml = function(req,res){
+    var id = req.query.id ? req.query.id : 1;
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        //正文内容查询
+        News.find({newID:parseInt(id)},function(err,news){
+            //右侧及底部内容添加
+            initContentForNews(id,null,docs,news,res,'newshtml');
+        })
+    });
+};
+
+function initContentForNews(id,type,docs,news,res,url){
+    //最新资讯查询
+    News.find(null,null,{sort: {date: -1}},function(err,newNewsList){
+        //热门推荐查询
+        News.find(null,null,{sort: {visitCount: -1},skip:0,limit :6},function(err,hotNewsList){
+            //同类推荐查询
+            if(news.length!=0){//如果正文有内容
+                News.find({type:parseInt(news[0].type)},null,{sort: {date: -1},skip:0,limit :5},function(err,sameNewsList){
+//                    console.log(hotNewsList);
+                    res.render(url, { title:'久拓|innosoft|久拓软件',
+                        type:type,
+                        kind:id,
+                        menus:docs,
+                        news:news,
+                        newNewsList:newNewsList,
+                        sameNewsList:sameNewsList,
+                        hotNewsList:hotNewsList
+                    });
+                })
+            }else{
+                res.render(url, { title:'久拓|innosoft|久拓软件',
+                    kind:id,
+                    menus:docs,
+                    news:new Object(),
+                    newNewsList:newNewsList,
+                    sameNewsList:new Object(),//空对象
+                    hotNewsList:hotNewsList
+                });
+            }
+        })
+    })
+}
+
+exports.product = function(req,res){
+    var id =req.query.id ? req.query.id : 1,
+        productId = req.query.pid ? req.query.pid : -1;
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        var menus=docs;
+
+        Product.find({moduleID:id},function(err,docs){
+            console.log(docs[0].moduleProduct[productId]);
+            var products = docs[0].moduleProduct;
+            var banners = [];
+            var product = products[0];//默认显示第一个产品
+            if(productId == -1) {//默认
+                productId = product.productID;
+            }
+            for(var i = 0; i < products.length; i++) {
+                banners.push({name:products[i].productName,id:products[i].productID,url:"product?id=" + id + "&pid=" + products[i].productID});
+                if(products[i].productID == productId) {
+                    product = products[i];//当前页要显示的产品
+                }
+            }
+
+            res.render('product', { title:'久拓|innosoft|久拓软件',
+                banner:banners,
+                kind:productId,
+                menus:menus,
+                product:product
+            });
+        })
+
+
+    });
+};
+
+exports.about = function(req,res){
+    var kind = req.query.kind ? req.query.kind : 1;
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,docs){
+        res.render('about', { title:'久拓|innosoft|久拓软件',
+            kind:kind,
+            menus:docs
+        });
+
+    });
+};
+
+exports.team = function(req,res){
+    var kind = req.query.kind ? req.query.kind : 1;
+    Menu.find({status:1},null,{sort: {menuID: 1}},function(err,menus){
+        Team.find(null,null,{sort: {order: 1}},function(err,teams){
+            Job.find(function(err,jobs){
+                //把job放到team中,一个team只能有一个job
+                for (var i = 0; i < teams.length; i++) {
+                    var team = teams[i]
+                    for (var j = 0; j < jobs.length; j++) {
+                        if(team.teamID == jobs[j].teamID) {
+                            team.job = jobs[j];
+                        }
+                    }
+                }
+                res.render('team', { title:'杭州久拓软件有限公司',
+                    kind:kind,
+                    menus:menus,
+                    teams:teams
+                });
+            })
+        })
+    });
+};

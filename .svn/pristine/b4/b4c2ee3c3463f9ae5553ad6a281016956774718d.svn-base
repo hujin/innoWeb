@@ -1,0 +1,61 @@
+.engage-module{ background:#FFF;margin-top: 20px; margin-bottom:30px; border-radius:0 0 3px 3px}
+.engage-hr-a{width:990px; background: url('../imgs/invite/jzzx-01.png') no-repeat;}
+.engage-hr-a .engage-cont{ padding-top:350px; padding-left:50px ;height:560px; margin-bottom:50px;position: relative}
+.engage-cont .growing-list{width:430px; float:left; margin-bottom:30px}
+.growing-list em{display:block; width:60px; height:60px; float:left; margin:0 30px; background-image:url('../imgs/invite/engage-icon.png')}
+.growing-list p{ font-size:14px; margin-bottom:10px; float:left; width:300px}
+.growing-list a{display:block; float:left; width:64px; height:22px; background:#e9ecf6; text-align:center; line-height:22px; margin-right:10px; border-radius:3px; margin-bottom:10px; font-size:12px}
+.growing-list .icon-a{ background-position: 0 0}
+.growing-list .icon-b{ background-position: 60px 0}
+.growing-list .icon-c{ background-position: 120px 0}
+.growing-list .icon-d{ background-position: 180px 0}
+
+.growing-table {position:absolute; background: url('../imgs/invite/engage-pic.png') no-repeat; width:710px; height:195px; bottom:0; left:140px}
+.growing-table .table-text{width:144px; float:left;padding-left:22px;padding-right: 7px;padding-top: 45px}
+.growing-table b{font-size:18px; margin-bottom:20px; display:block; text-align:center}
+.growing-table p{ color:#FFF; line-height:16px}
+
+.engage-hr-b{width:990px; background:url('../imgs/invite/jzzx-03.png') no-repeat; height:350px}
+.engage-hr-b{position:relative}
+.engage-hr-b .title-h4{margin-left:70px; padding-top:10px; padding-bottom:10px}
+.engage-hr-b .text-p{position:absolute; width:390px; left:180px; top:10px; font-size:14px}
+
+.engage-salary{width:990px; background:url('../imgs/invite/jzzx-04.png') no-repeat; position:relative}
+.salary-contant{margin-top:35px; padding:0 40px; background:url('../imgs/invite/salary.png') no-repeat 80px top; padding-top:185px}
+.salary-contant .salary-h3{ font-size:16px; font-weight:bold; overflow:hidden; clear:both; height:40px; line-height:40px}
+.salary-h3 em{float:left; background-image:url('../imgs/invite/engage-icon.png'); width:40px; height:40px; margin-right:20px}
+.salary-h3 .gz-icon{ background-position:0 -65px}
+.salary-h3 .sb-icon{ background-position:-40px -65px}
+.salary-cont{width:950px; padding-bottom:40px}
+.salary-cont ul{padding-top:5px; overflow:hidden; clear:both}
+.salary-cont .list{ background:url('../imgs/invite/maglist-icon.png') no-repeat 30px 6px; padding-left:60px; margin:10px 0; *margin-bottom:0px;font-size:14px;}
+.salary-cont .float{float:left; width:400px; height:70px}
+.salary-cont .list b{font-size:15px; margin-right:20px}
+.salary-cont .list dl{padding-top:10px}
+.salary-cont .pic{background:url('../imgs/invite/jqr.png') no-repeat; width:228px; height:265px; position:absolute; right: 190px;top: 450px;}
+
+.engage-table{font-size:14px;border:none; border-bottom:1px solid #f78719; width:840px; margin:20px auto; margin-bottom:50px}
+.engage-table th{ color:#f78719;line-height:30px;border-bottom:2px solid #f78719; font-weight:bold;text-indent:20px}
+.engage-table td{ line-height:30px; text-indent:20px}
+.engage-table td b{float:right;color:#f78719; margin-right:10px}
+.engage-table .rline{ border-right:1px #dfe1e6 solid}
+
+.module-bottom{background:url('../imgs/invite/jzzx-bottom.png') no-repeat; height:9px; width:990px}
+.team-title{height:80px; font-size:22px; line-height:80px; padding:0 55px}
+.title-h3{margin-left:5px; padding-left:30px; background:url('../imgs/invite/engage-icon-01.png') 0 center no-repeat; font-size:16px; font-weight:bold; margin-top:30px}
+.title-h4{font-size:14px; padding:30px 0; margin-left:20px; padding-left:30px; background:url('../imgs/invite/maglist-icon.png') no-repeat 0 center}
+.title-h4 b{margin-right:10px}
+
+/*岗位详情*/
+.salary-box{width:550px; border:1px #dfe1e6 solid; position:absolute; left:0px; bottom:110px; background:#fafbfd; border-top:2px #f78719 solid; border-radius:3px;display:none}
+.salary-box-container{padding:10px; clear:both; overflow:hidden}
+.salary-box-header{height:24px;line-height:24px}
+.salary-box-header li{display:inline-block;margin-right:25px}
+.salary-box-content{border-top:1px #2b2b2b dashed; margin-top:7px; padding-top:7px}
+.salary-box-content dl{line-height: 24px;}
+.salary-box-box-btn{float:right; background:#517dcd; border:none; width:106px; height:28px;line-height:28px;text-align:center; border-radius:4px; color:#FFF}
+.salary-box-box-btn:link{color:#fff}
+.salary-box-box-btn:hover{color:#fff;}
+.salary-box h5{font-size:14px; font-weight:bold; line-height:25px}
+.salary-box p{line-height:24px}
+

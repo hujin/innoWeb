@@ -1,0 +1,46 @@
+div(class='engage-module')
+    div(class='engage-salary')
+        include invite-box
+        h2(class='team-title') 岗位招聘
+        table(cellspacing='0',cellpadding='0',class='engage-table')
+            tr
+                th(style='width:35%') 招聘岗位
+                th 招聘岗位
+                th 招聘岗位
+            tr
+                td(class='rline',data-id='1',data-position='150,110')
+                    b [3]
+                    ='项目经理'
+                td(class='rline',data-id='2',data-position='450,110')
+                    b [5]
+                    ='项目经理（储备）'
+                td(class='rline',data-id='3',data-position='250,110')
+                    b [1]
+                    ='人力资源主管'
+            tr(style='background:#f5f7fa')
+                td(class='rline',data-id='4',data-position='150,80')
+                    b [3]
+                    ='JAVA开发组长（Team Leader）'
+                td(class='rline',data-id='5',data-position='450,80')
+                    b [5]
+                    ='高级JAVA开发工程师'
+                td(class='rline',data-id='6',data-position='250,80')
+                    b [2]
+                    ='需求分析师'
+            tr
+                td(class='rline',data-id='7',data-position='150,50')
+                    b [1]
+                    ='资深前端工程师'
+                td(class='rline',data-id='8',data-position='450,50')
+                    b [1]
+                    ='前端工程师'
+                td
+            tr(style='background:#f5f7fa')
+                td(class='rline',data-id='9',data-position='150,20')
+                    b [5]
+                    ='数据开发工程师'
+                td(class='rline',data-id='10',data-position='450,20')
+                    b [2]
+                    ='数据实施工程师'
+                td
+    div(class='module-bottom')

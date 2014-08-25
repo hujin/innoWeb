@@ -1,0 +1,31 @@
+.about-cont{padding:30px; position:relative}
+.about-cont .logo{position:absolute; right:50px; top:150px}
+.about-cont h1{font-size:30px; font-weight:bold;padding-bottom:10px; margin-bottom:20px; position:relative; border-bottom:2px #e3e3e3 solid}
+h1 em{width:32px; height:32px; display:block; position:absolute; left:-40px; top:8px; background-image:url('../imgs/about/web-icons.png'); background-repeat:no-repeat;}
+.about-cont h2{font-size:20px ;margin-bottom:20px; position:relative; padding:7px 0}
+h2 em{width:30px; height:30px; display:block; position:absolute; left:-30px; top:8px; background-image:url('../imgs/about/web-icons.png'); background-repeat:no-repeat;}
+.about-cont .high{width:580px; font-size:14px; line-height:28px; min-height:180px}
+.icon-about{background-position:0 -90px}
+.icon-introduce{background-position:0 -120px}
+.icon-idea{background-position:0 -150px}
+.icon-environ{background-position:0 -180px}
+.icon-partner{background-position:0 -210px}
+
+.about-cont .idea h3{text-align:center}
+.idea .cont-list{float:left; margin-right:110px}
+.idea .cont-list .top{ height:50px}
+.idea .cont-list li{width:390px; margin-bottom:10px;height:90px; position:relative}
+.idea .cont-list li em{position:absolute; top:10px; right:10px; font-size:10px; color:#adafb3; padding-right:10px; background:url('../imgs/about/linian-icon.png') no-repeat right center}
+.idea .cont-list .text{margin-bottom:5px; background:url('../imgs/about/linian-text.png')}
+.idea .cont-list .text-b{margin-bottom:5px; background:url('../imgs/about/linian-text-b.png')}
+.idea .cont-list p{padding:10px; padding-top:0;font-size:13px}
+.idea .cont-list h4{height:14px; padding:5px 0 15px 10px; font-size:16px}
+.about-cont .img-list{width:330px; float:left}
+.about-cont .img-list .list{float:left; width:98px; height:76px; margin-right:10px; margin-bottom:10px}
+.about-cont .img-list .list a{display:block}
+.about-cont .img-list .list img{width:98px}
+.about-cont .img-cont{float:left; width:560px}
+
+.about-cont .par-list .plist{float:left; width:120px; height:60px; margin-right:10px; margin-bottom:10px}
+.about-cont .par-list .plist a{display:block}
+.about-cont .clear{overflow:hidden; clear:both; padding-bottom:20px}

@@ -1,0 +1,28 @@
+div(class='salary-box')
+    div(class='salary-box-container')
+        h5 GIS开发工程师
+        div(class='salary-box-header')
+            ul
+                li 招聘人数：
+                    span(id='salary-num') 2人
+                li 学历要求：
+                    span(id='salary-edu') 本科
+                li 工作经验：
+                    span(id='salary-exp') 2人
+                li 工资待遇：
+                    span(id='salary-pay') 面议
+        div(class='salary-box-content')
+            dt
+                dl 职位标签:
+                    label(id='salary-tags') gis java mapbar mapabc arcgis
+                dl 职位职能:
+                    label(id='salary-name') 高级软件工程师
+                dl 职位描述:
+                    label(id='salary-desc')!='xxxx'
+                dl 任职资格:
+                    label(id='salary-req')!='<br>1、大学本科以上学历，地理信息系统、测绘或计算机相关专业；<br>2、熟练掌握java、Javascript编程技术，熟悉FLEX、Silverlight开发者优先；<br>3、熟悉ArcGIS、mapabc、mapbar等主流二维、三维GIS平台， 熟悉电子地图有关规范和数据转换技术；能熟练使用一种平台进行二次开发，熟悉ArcGIS Server、ArcGIS Engine开发者优先；<br>4、熟悉SQL Server或ORACLE数据库，能够熟练使用常见的空间数据格式；<br>5、有扎实的专业基础知识和良好的客户沟通能力、有一定的团队管理经验和协调沟通协调能力；<br>6、具有二年以上相关实际工作经验。'
+                dl 职责描述:
+                    label(id='salary-resp')!='<br>1、负责组织、协调并参与GIS相关功能模块的开发，对其他开发人员进行地理空间相关专业技术指导和培训；'
+        div(class='salary-box-footer')
+            a(class='salary-box-box-btn salary-box-box-close') 关闭
+            a(class='salary-box-box-btn salary-box-box-send',style='margin-right:10px',href='mailto:hr_zhaopin@9tuo.com') 点我与HR联系

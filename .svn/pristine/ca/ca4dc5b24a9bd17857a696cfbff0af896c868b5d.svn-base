@@ -1,0 +1,7 @@
+div(class='mould')
+    h3 热门推荐
+    div(class='list')
+        ul(class='rmtj')
+            each val,index in hotNewsList
+                li(class='rmtj-list')
+                    a(href='newshtml?id='+val.newID+ '&kind='+ val.type,title=val.title)!='<b>·</b>' + val.title

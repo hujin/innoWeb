@@ -1,0 +1,24 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/base.css')
+    link(rel='stylesheet',href='/css/main.css')
+    link(rel='stylesheet',href='/css/team.css')
+    script(type='text/javascript',src='/js/jquery-debug.js')
+    script(type='text/javascript',src='/js/commons.js')
+block content
+    include commons/nav
+    div(class='main')
+        div(class='content')
+            div(class='team-cont')
+                div(class='team-img')
+                    img(src='imgs/team.png')
+                ul(class='namelist')
+                    -for (var i = 0; i < teams.length; i++)
+                     -var team = teams[i]
+                     li(class='list')
+                        a(href='#name'+team.teamID,class='hover')=team.teamName
+                include team/team-list.jade
+
+
+    include commons/footer

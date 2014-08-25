@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{ background:#fefefe}
+
+
+.banner{
+    min-width:980px;
+    width:100%;
+    height:600px;
+  /*  margin:-7px auto 0px;      */
+    overflow:hidden;
+    background:url('../imgs/portal-banner2.jpg') center repeat scroll #1e4296;
+}
+
+.banner .banner-cont{width:980px; margin:0 auto;height:600px;position:relative;}
+
+.pic-slide-prev,.pic-slide-next{
+    width:90px;
+    height:90px;
+    position:absolute;
+    top:255px;
+    z-index:10;
+}
+
+.pic-slide-prev{
+    left:0px;
+}
+
+.pic-slide-prev a,.pic-slide-next a{
+    width:90px;
+    height:90px;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+
+.pic-slide-prev a{
+    background:url('../imgs/prev.png') no-repeat;
+}
+
+.pic-slide-prev a:hover{
+    background:url('../imgs/prev-hover.png') no-repeat;
+}
+
+.pic-slide-next{
+    right:0px;
+}
+
+.pic-slide-next a{
+    background:url('../imgs/next.png') no-repeat;
+}
+
+.pic-slide-next a:hover{
+    background:url('../imgs/next-hover.png') no-repeat;
+}
+
+.pic-slide-content{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width:980px
+}
+
+.pic-slide-panel{
+    position: relative;
+    width: 990px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.pic-slide-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    text-align: center;
+    z-index: 12;
+}
+
+.pic-slide-nav .pic-slide-trigger {
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    margin-left: 5px;
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+    cursor: pointer;
+    list-style: none;
+}
+
+.pic-slide-nav .pic-slide-active {
+    color: #f78719;
+}
+
+.content{height:300px}
+.content .new{width:440px; float:left; padding-top:25px; margin-right:40px}
+.content .new ul{margin-top:20px;}
+.content .new li{line-height:21px;font-size:14px;margin: 4px 0px;}
+.content .new li span{float:right}
+.content .new li b{font-family:"宋体"; margin-left:-5px}
+.content .title{ height:35px; border-bottom:1px #555 solid; line-height:35px; margin-bottom:15px}
+.content .title b{ font-size:20px; float:left; margin-right:5px;color: #2b2b2b;
+    font-weight: bolder;}
+.content .title i{font-size:10px; font-style:normal; font-weight:normal; line-height:47px}
+.content .title a{float:right; height:28px; margin-top:7px}
+.content .title a em{background:url('../imgs/arrow.png') no-repeat;height:6px;width:4px;display:inline-block;*display:inline;*zoom:1;margin:0 4px 2px 3px}
+.content .exp{width:240px; float:left;padding-top:25px; margin-right:40px}
+.content .exp .exp-cont{ background:#ebe9de; height:156px}
+
+.content .team{width:230px; float:left;padding-top:25px; position:relative; height:207px}
+.content .team em{position:absolute; display: block; width:38px; height:14px; bottom:0; right:0}
+.content .team h3{font-size:16px;padding-top:8px;}
+.content .team h3 i{font-size:10px; font-style:normal; font-weight:normal; }
+

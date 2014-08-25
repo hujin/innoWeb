@@ -1,0 +1,7 @@
+div(class='banner-nav')
+    div(class='tn-cont')
+        each val,index in banner
+            if (val.id==kind)
+                a(class='tn-list current' href=val.url)=val.name
+            else
+                a(class='tn-list' href=val.url)=val.name

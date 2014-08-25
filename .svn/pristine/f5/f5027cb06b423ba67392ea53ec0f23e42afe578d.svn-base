@@ -1,0 +1,22 @@
+div(class='footer')
+    div(class='footer-cont')
+        div(class='footer-qr')
+            img(src='/imgs/qr.png')
+        div(class='footer-tools')
+            div(class='footer-menu')
+                ul
+                    li
+                        a(href='#') 首页
+                    li
+                        a(href='#') 关于久拓
+                    li
+                        a(href='#') 联系我们
+                    li
+                        a(href='#') 地图导航
+                    li
+                        a(href='#',style='border:none') 诚聘英才
+            div(class='footer-info')
+                p Copyright ©2013 Innosoft Corporation, All Rights Reserved
+                p ICP备案:浙ICP备12010453号
+                    a
+                        img(src='/imgs/footer-icon.png',style='padding-left:10px')

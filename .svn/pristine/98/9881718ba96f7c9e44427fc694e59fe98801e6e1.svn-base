@@ -1,0 +1,57 @@
+
+/*
+ * GET home page.
+ */
+var mongoose =require('mongoose');
+
+var Schema= mongoose.Schema;
+var ObjectId=Schema.objectId;
+
+var menuSchema=new Schema({
+    menuID:Number,
+    name:String,
+    url:String,
+    child:[{subMenuID:Number,name:String,url:String,status:Number}],
+    status:Number
+});
+
+var Menu=mongoose.model('Menu',menuSchema);
+
+exports.portal = function(req, res){
+    Menu.find({status:1},function(err,docs){
+        res.render('portal', { title:'杭州久拓软件有限公司',newsData:[{date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+            {date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+            {date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+            {date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+            {date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+            {date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+            {date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'},
+            {date:'2013.08.09',title:'公司最新资讯是巴拉巴拉巴拉巴拉巴拉巴拉巴拉...'}],
+            docs:docs
+        });
+
+    });
+
+};
+
+
+exports.contact = function(req,res){
+    Menu.find({status:1},function(err,docs){
+        res.render('contact', { title:'杭州久拓软件有限公司',
+            docs:docs
+        });
+
+    });
+};
+
+exports.news = function(req,res){
+    var kind = req.query.kind ? req.query.kind : 1;
+
+    Menu.find({status:1},function(err,docs){
+        res.render('news', { title:'杭州久拓软件有限公司',
+            kind:kind,
+            docs:docs
+        });
+
+    });
+};

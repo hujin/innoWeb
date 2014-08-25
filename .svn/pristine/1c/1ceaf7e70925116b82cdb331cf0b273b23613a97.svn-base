@@ -1,0 +1,12 @@
+div(class='header')
+    div(class='nav')
+        a(href='portal')
+            img(class='logo',src='/imgs/logo.png')
+        ul(class='main-nav')
+            - if(menus.length)
+                each Menu in menus
+                    li
+                        a(href=Menu.url)
+                            =Menu.name
+include nav-sub
+

@@ -1,0 +1,15 @@
+div(class='right')
+    div(class='mould')
+        h3 最新资讯
+        ul(class='list')
+            each val,index in newNewsList
+                li(class='news-p')
+                    a(href='newshtml?id='+val.newID + '&kind='+ val.type,title=val.title)!='<b>·</b>' + val.title
+    div(class='mould')
+        h3 热门推荐
+        ul(class='list')
+            each val,index in hotNewsList
+                li(class='news-p')
+                    a(href='newshtml?id='+val.newID + '&kind='+ val.type,title=val.title)!='<b>·</b>' + val.title
+    div(class='mould')
+        img(src='../imgs/news/news-jpg.jpg')

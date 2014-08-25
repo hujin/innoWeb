@@ -1,0 +1,8 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='Shortcut Icon',href='')
+    block head
+  body
+    block content

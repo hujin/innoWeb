@@ -1,0 +1,36 @@
+$(function(){
+    loadFlvs("","http://192.168.1.62:2312/www/cf.flv","resViewer");
+    var url ='newshtml/newsAddVotes?ID=' + $(".news-votes").attr("data-id") + '&votes=' + $(".news-votes").attr("data-votes");
+    $.ajax({
+        url:url,
+        type:'get'
+    });
+
+    loadFlvs1("","http://192.168.1.62:2312/www/fbh.flv","resViewer2");
+});
+
+function loadFlvs(hostPath,flvUrl,id) {
+    var obj="<a href='"+flvUrl+"' width='500px' height='400px' id='player'>";
+    $("#"+id).html(obj);
+    flowplayer("player", "/js/flowplayer-3.2.5.swf", {
+        onLoad : function() { // called when player has finished loading
+            this.setVolume(30); // set volume property
+            this.setHeight(420);
+        }
+    });
+}
+
+function loadFlvs1(hostPath,flvUrl,id) {
+    var obj="<a href='"+flvUrl+"' width='500px' height='400px' id='player1'>";
+    $("#"+id).html(obj);
+    flowplayer("player1", "/js/flowplayer-3.2.5.swf", {
+        onLoad : function() { // called when player has finished loading
+            this.setVolume(30); // set volume property
+            this.setHeight(420);
+        },
+        clip: {
+            autoPlay: false,
+            autoBuffering: true
+        }
+    });
+}

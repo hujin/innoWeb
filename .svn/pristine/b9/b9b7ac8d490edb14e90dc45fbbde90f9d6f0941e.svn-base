@@ -1,0 +1,13 @@
+div(class='sub-nav')
+    div(class='nav-cont')
+        span(class='nav-img')
+            img(class='module-logo' src='/imgs/product.png')
+        ul(class='navlist')
+            each Menu in menus
+                li.fn
+                    ul
+                        each subMenu in Menu.child
+                            li
+                                a(href=subMenu.url,target='_self')
+                                    font='· '
+                                    =subMenu.name

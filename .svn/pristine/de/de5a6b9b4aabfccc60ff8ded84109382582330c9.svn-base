@@ -1,0 +1,20 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/about.css')
+    script(type='text/javascript',src='/js/about.js')
+block content
+    include commons/nav
+    div(class='main')
+        div(class='content')
+            div(class='about-cont')
+                div(class='logo')
+                    img(src='imgs/about/about-logo.png')
+                h1
+                    em(class='icon-about')
+                    ='公司概况'
+                include about/about-introduce
+                include about/about-idea
+                include about/about-environ
+                include about/about-partner
+    include commons/footer

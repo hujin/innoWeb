@@ -1,0 +1,21 @@
+extends layout
+
+block head
+    link(rel='stylesheet',href='/css/team.css')
+block content
+    include commons/nav
+    div(class='main')
+        include commons/crumbs
+        div(class='content')
+            div(class='team-cont')
+                div(class='team-img')
+                    img(src='imgs/team.png')
+                ul(class='namelist')
+                    -for (var i = 0; i < teams.length; i++)
+                     -var team = teams[i]
+                     li(class='list')
+                        a(href='#name'+team.teamID,class='hover')=team.teamName
+                include team/team-list.jade
+
+
+    include commons/footer

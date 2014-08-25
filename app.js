@@ -1,0 +1,51 @@
+
+/**
+ * Module dependencies.
+ */
+
+var express = require('express');
+var routes = require('./routes');
+var http = require('http');
+var path = require('path');
+var mongoose =require('mongoose');
+
+mongoose.connect('mongodb://192.168.1.61:8868/webSite',function(err){
+//mongoose.connect('mongodb://www.9tuo.com:8868/webSite',function(err){
+//mongoose.connect('mongodb://localhost:8888',function(err){
+    if(!err){
+        console.log("connected to mongodb");
+    }else{
+        console.log(err);
+        throw err;
+    }
+});
+
+
+var app = express();
+
+// all environments
+
+
+app.set('port', process.env.PORT || 80);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+app.use(express.logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.cookieParser('inno'));
+app.use(express.session({secret:'hujin'}));
+app.use(express.favicon());
+// development only
+if ('development' == app.get('env')) {
+    app.use(express.errorHandler());
+}
+
+routes.index(app);
+
+
+http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+});

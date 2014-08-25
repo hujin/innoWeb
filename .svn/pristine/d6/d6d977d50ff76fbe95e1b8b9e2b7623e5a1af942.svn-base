@@ -1,0 +1,75 @@
+- var list1 = [],list2=[],list3=[],list4=[],num=0,strhtml='';
+each val,index in activities
+    -num=index%4;
+    if(num==0)
+        -strhtml='<div class=\'list-item\'>';
+        -strhtml+='    <img src=\''+ val.firstImgUrl +'\' data-id=\''+ val.activityID +'\' data-votes=\''+ val.votes +'\' \>';
+        -strhtml+='    <div class=\'list-item-info\'>';
+        -strhtml+='        <div class=\'list-item-info-title\'>';
+        -strhtml+='            <h2 title='+ val.title +' >'+ val.title +'</h2>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-summary\'>';
+        -strhtml+='             <span>'+ val.summary +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-other\'>';
+        -strhtml+='             <span class=\'list-item-info-date\'>'+ new Date(val.date).toISOString().substr(0,10) +'</span>';
+        -strhtml+='             <span class=\'list-item-info-vote\'>已阅:'+ val.votes +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='    </div>';
+        -strhtml+='</div>';
+        -list1.push(strhtml)
+    else if(num==1)
+        -strhtml='<div class=\'list-item\'>';
+        -strhtml+='    <img src=\''+ val.firstImgUrl +'\' data-id=\''+ val.activityID +'\' data-votes=\''+ val.votes +'\' \>';
+        -strhtml+='    <div class=\'list-item-info\'>';
+        -strhtml+='        <div class=\'list-item-info-title\'>';
+        -strhtml+='            <h2 title='+ val.title +' >'+ val.title +'</h2>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-summary\'>';
+        -strhtml+='             <span>'+ val.summary +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-other\'>';
+        -strhtml+='             <span class=\'list-item-info-date\'>'+ new Date(val.date).toISOString().substr(0,10) +'</span>';
+        -strhtml+='             <span class=\'list-item-info-vote\'>已阅:'+ val.votes +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='    </div>';
+        -strhtml+='</div>';
+        -list2.push(strhtml)
+    else if(num==2)
+        -strhtml='<div class=\'list-item\'>';
+        -strhtml+='    <img src=\''+ val.firstImgUrl +'\' data-id=\''+ val.activityID +'\' data-votes=\''+ val.votes +'\' \>';
+        -strhtml+='    <div class=\'list-item-info\'>';
+        -strhtml+='        <div class=\'list-item-info-title\'>';
+        -strhtml+='            <h2 title='+ val.title +' >'+ val.title +'</h2>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-summary\'>';
+        -strhtml+='             <span>'+ val.summary +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-other\'>';
+        -strhtml+='             <span class=\'list-item-info-date\'>'+ new Date(val.date).toISOString().substr(0,10) +'</span>';
+        -strhtml+='             <span class=\'list-item-info-vote\'>已阅:'+ val.votes +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='    </div>';
+        -strhtml+='</div>';
+        -list3.push(strhtml)
+    else
+        -strhtml='<div class=\'list-item\'>';
+        -strhtml+='    <img src=\''+ val.firstImgUrl +'\' data-id=\''+ val.activityID +'\' data-votes=\''+ val.votes +'\' \>';
+        -strhtml+='    <div class=\'list-item-info\'>';
+        -strhtml+='        <div class=\'list-item-info-title\'>';
+        -strhtml+='            <h2 title='+ val.title +' >'+ val.title +'</h2>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-summary\'>';
+        -strhtml+='             <span>'+ val.summary +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='        <div class=\'list-item-info-other\'>';
+        -strhtml+='             <span class=\'list-item-info-date\'>'+ new Date(val.date).toISOString().substr(0,10) +'</span>';
+        -strhtml+='             <span class=\'list-item-info-vote\'>已阅:'+ val.votes +'</span>';
+        -strhtml+='        </div>';
+        -strhtml+='    </div>';
+        -strhtml+='</div>';
+        -list4.push(strhtml)
+div(class='list',id='list-one')!=list1.join('')
+div(class='list',id='list-two')!=list2.join('')
+div(class='list',id='list-three')!=list3.join('')
+div(class='list',id='list-four')!=list4.join('')

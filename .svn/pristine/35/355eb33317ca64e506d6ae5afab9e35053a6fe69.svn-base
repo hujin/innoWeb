@@ -1,0 +1,12 @@
+div(class='news')
+    h2(class='title')
+        a MORE
+            em
+        b 最新资讯
+        i LATEST INFORMATION
+    ul
+        each val,index in newsData
+            - var date = new Date(val.date).toISOString().substr(0,10);
+            li
+                span=date
+                a(href='newshtml?id='+val.newID,title=val.title)!='<b>·</b>' + val.title
